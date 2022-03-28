@@ -20,10 +20,6 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
-    """
-    Demonstrates Flask app communicating
-    with the Mongo database
-    """
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
