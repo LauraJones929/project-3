@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" 
         integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
-    <link rel="stylesheet" href="https:
-    //cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
@@ -16,6 +15,35 @@
     <title>My Cookbook</title>
 </head>
 <body>
+
+    <header>
+        <!-- navbar -->
+        <nav class="nav-extended navbar blue-grey lighten-3">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo">My Cookbook</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Add A Recipe</a></li>
+                    <li><a href="#">Shopping List</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- mobile nav -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Add A Recipe</a></li>
+            <li><a href="#">Shopping List</a></li>
+        </ul>               
+    </header>
+
     {% block content %}
     {% endblock %}
 
