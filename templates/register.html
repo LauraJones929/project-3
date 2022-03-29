@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align" id="register-title">Register:</h3>
+
+    <div class="row">
+        <form class="col s10 offset-s1 l6 offset-l3" method="POST" action="{{ url_for('register') }}">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s10 offset-s1 l8 offset-l2">
+                    <input id="username" name="username" type="text" class="validate input-text" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- email address -->
+            <div class="row">
+                <div class="input-field col s10 offset-s1 l8 offset-l2">
+                    <input id="email" name="email" type="email" class="validate input-text" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s10 offset-s1 l8 offset-l2">
+                    <input id="password1" name="password1" type="password" class="validate input-text" required>
+                    <label for="password1">Password</label>
+                </div>
+            </div>
+            <!-- password confirmation -->
+            <div class="row">
+                <div class="input-field col s10 offset-s1 l8 offset-l2">
+                    <input id="password2" name="password2" type="password" class="validate input-text" required>
+                    <label for="password2">Password Confirmation</label>
+                </div>
+            </div>
+            <!-- register -->
+            <div class="row">
+                <button type="submit" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="submit-btn">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
