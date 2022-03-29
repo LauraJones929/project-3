@@ -44,8 +44,25 @@
         </ul>               
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <h3 class="center-align" id="register-title">Register</h3>
+    
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row">
+                        <p class="center-align" id="registration">{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

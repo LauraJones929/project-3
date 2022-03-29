@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align" id="register-title">Register:</h3>
-
     <div class="row">
         <form class="col s10 offset-s1 l6 offset-l3" method="POST" action="{{ url_for('register') }}">
             <!-- username -->
             <div class="row">
                 <div class="input-field col s10 offset-s1 l8 offset-l2">
-                    <input id="username" name="username" type="text" class="validate input-text" required>
+                    <input id="username" name="username" type="text" minlength="8"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate input-text" required>
                     <label for="username">Username</label>
                 </div>
             </div>
@@ -22,15 +21,19 @@
             <!-- password -->
             <div class="row">
                 <div class="input-field col s10 offset-s1 l8 offset-l2">
-                    <input id="password1" name="password1" type="password" class="validate input-text" required>
-                    <label for="password1">Password</label>
+                    <input id="password" name="password" type="password" minlength="8"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate input-text"
+                        onkeyup='check();' required>
+                    <label for="password">Password</label>
                 </div>
             </div>
             <!-- password confirmation -->
             <div class="row">
                 <div class="input-field col s10 offset-s1 l8 offset-l2">
-                    <input id="password2" name="password2" type="password" class="validate input-text" required>
-                    <label for="password2">Password Confirmation</label>
+                    <input id="confirm_password" name="confirm_password" type="password"
+                        class="validate input-text" onkeyup='check();' required>
+                    <label for="confirm_password">Password Confirmation</label>
+                    <span id='message'></span>
                 </div>
             </div>
             <!-- register -->
