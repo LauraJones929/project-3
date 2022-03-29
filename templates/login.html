@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align" id="login-title">Log In</h3>
+
+    <div class="row">
+        <form class="col s10 offset-s1 l6 offset-l3" method="POST" action="{{ url_for('login') }}">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s10 offset-s1 l8 offset-l2">
+                    <input id="username" name="username" type="text" minlength="8"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate input-text" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s10 offset-s1 l8 offset-l2">
+                    <input id="password" name="password" type="password" minlength="8"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate input-text"
+                        onkeyup='check();' required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- login -->
+            <div class="row">
+                <button type="submit" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1"
+                    id="submit-btn">
+                    Log In
+                </button>
+            </div>
+            <!-- new user -->
+            <div class="row">
+                <button onclick="window.location.href='register.html'" type="submit"
+                    class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="new-user-btn">
+                    New User? Click to Register
+                </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Indie+Flower&family=Montserrat:wght@400&display=swap');
 
-.navbar a, #register-title, #submit-btn, .input-text, #registration {
+.navbar a, #register-title, #submit-btn, .input-text, #registration, #login-title {
     font-family: 'Montserrat', 'sans-serif';
 }
 
-#register-title, #registration {
+#register-title, #registration, #login-title {
     color: #9e9e9e;
+}
+
+#registration {
+    font-size: 20px;
 }

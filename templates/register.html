@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="center-align" id="register-title">Register</h3>
+
     <div class="row">
         <form class="col s10 offset-s1 l6 offset-l3" method="POST" action="{{ url_for('register') }}">
             <!-- username -->
@@ -40,6 +42,12 @@
             <div class="row">
                 <button type="submit" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="submit-btn">
                     Sign Up
+                </button>
+            </div>
+            <div class="row">
+                <button onclick="window.location.href='login.html'" type="submit"
+                    class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="new-user-btn">
+                    Already Registered? Click to log in.
                 </button>
             </div>
         </form>
