@@ -44,6 +44,7 @@ def register():
         # insert new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful! You can now log in!")
+        return redirect(url_for("get_recipes", username=session["user"]))
     return render_template("register.html")
 
 
@@ -59,7 +60,9 @@ def login():
             if check_password_hash(
                 user_exists["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Hello, {}! You have successfully logged in!".format(request.form.get("username")))
+                    flash("Hello, {}! You have successfully logged in!".format(
+                        request.form.get("username")))
+                    return redirect(url_for("get_recipes", username=session["user"]))
             else:
                 # invalid password match
                 flash("Uh oh! You have entered an incorrect Username and/or Password")
@@ -68,7 +71,7 @@ def login():
             # username doesn't exist
             flash("Uh oh! You have entered an incorrect Username and/or Password")
             return redirect(url_for("login"))
-            
+
     return render_template("login.html")
 
 
