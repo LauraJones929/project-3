@@ -5,19 +5,10 @@
         <div class="col s10 offset-s1 l6 offset-l3">
             <div class="card-panel">
                 <h3 class="card-title center-align blue-grey lighten-3">
-                    My Recipes
+                    {{ username }}'s Online Cookbook
                 </h3>
             </div>
         </div>
     </div>
-
-    {% for recipe in recipes %}
-        {{ recipe.name }}<br>
-        {{ recipe.diet }}<br>
-        {{ recipe.cooking_time }}<br>
-        {{ recipe.skill_level }}<br>
-        {{ recipe.serves }}<br>
-        {{ recipe.vegetarian }}<br>
-    {% endfor %}
 
 {% endblock %}
