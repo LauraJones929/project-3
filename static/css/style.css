@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Indie+Flower&family=Montserrat:wght@400&display=swap');
 
 .navbar a, #register-title, #submit-btn, .input-text,
-#registration, #login-title, .card-title {
+#registration, #login-title, .card-title,
+.collapsible-header, .card-content {
     font-family: 'Montserrat', 'sans-serif';
 }
 
@@ -16,4 +17,8 @@
 .card-title {
     padding: 20px;
     color: white;
+}
+
+#vegan-title, #meat-title {
+    color: black;
 }
