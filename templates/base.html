@@ -18,38 +18,65 @@
 
     <header>
         <!-- navbar -->
-        <nav class="nav-extended navbar blue-grey lighten-3">
+        <nav class="font-style nav-extended navbar blue-grey lighten-3">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">My Cookbook</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right font-style">
+                    <i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down" aria-labelledby="home-link my-recipes-link
+                    add-recipe-link logout-link login-link register-link">
+                    <li>
+                        <a href="{{ url_for('get_recipes') }}" id="home-link">Home</a><
+                            /li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('get_recipes', username=session['user']) }}">My Recipes</a></li>
-                        <li><a href="#">Add A Recipe</a></li>
-                        <li><a href="#">Shopping List</a></li>
-                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                        <li>
+                            <a href="{{ url_for('get_recipes', username=session['user']) }}"
+                            id="my-recipes-link">My Recipes</a>
+                        </li>
+                        <li>
+                            <a href="#" id="add-recipe-link">Add A Recipe</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('logout') }}" id="logout-link">Logout</a>
+                        </li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li>
+                            <a href="{{ url_for('login') }}" id="login-link">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('register') }}" id="register-link">Register</a>
+                        </li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
         
         <!-- mobile nav -->
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+        <ul class="sidenav" id="mobile-demo" aria-labelledby="home-link my-recipes-link
+            add-recipe-link logout-link login-link register-link">
+            <li>
+                <a href="{{ url_for('get_recipes') }}" id="home-link">Home</a>
+            </li>
             {% if session.user %}
-                <li><a href="{{ url_for('get_recipes', username=session['user']) }}">My Recipes</a></li>
-                <li><a href="#">Add A Recipe</a></li>
-                <li><a href="#">Shopping List</a></li>
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <li>
+                    <a href="{{ url_for('get_recipes', username=session['user']) }}"
+                    id="my-recipes-link">My Recipes</a>
+                </li>
+                <li>
+                    <a href="#" id="add-recipe-link">Add A Recipe</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('logout') }}" id="logout-link">Logout</a>
+                </li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li>
+                    <a href="{{ url_for('login') }}" id="login-link">Login</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('register') }}" id="register-link">Register</a>
+                </li>
             {% endif %}
-        </ul>               
+        </ul>            
     </header>
     
     <section>
@@ -58,7 +85,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row">
-                        <p class="center-align" id="registration">{{ message }}</p>
+                        <p class="center-align font-style" id="registration">{{ message }}</p>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -69,6 +96,49 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    <footer class="page-footer blue-grey lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 m12 s12 hidden">
+                    <h5 class="font-style white-text">
+                        <a href="register.html" id="signup">Sign Up!</a>
+                    </h5>
+                    <p class="grey-text text-lighten-4 font-style">Click to sign up to store all your
+                        favourite recipes! <br>
+                        Don't forget to follow us on social media to share your 
+                        fabulous creations >>>
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 m12 s12" id="social-links">
+                    <h5 class="white-text font-style">Follow Us!</h5>
+                    <span>
+                        <a class="grey-text text-lighten-3" href="https://www.facebook.com"
+                            rel="noopener" aria-label="visit our Facebook page (new tab)" target="_blank">
+                            <i class="fa-brands fa-facebook-square"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="grey-text text-lighten-3" href="https://www.instagram.com"
+                            rel="noopener" aria-label="visit our Instagram page (new tab)" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="grey-text text-lighten-3" href="https://www.twitter.com"
+                            rel="noopener" aria-label="visit our Twitter page (new tab)" target="_blank">
+                            <i class="fa-brands fa-twitter-square"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container font-style">
+                © 2014 Copyright Text
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

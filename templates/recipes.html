@@ -4,21 +4,12 @@
     <div class="row">
         <div class="col s10 offset-s1 l6 offset-l3">
             <div class="card-panel">
-                <h3 class="card-title center-align blue-grey lighten-3">
+                <h3 class="font-style card-title center-align blue-grey lighten-3">
                     My Recipes
                 </h3>
             </div>
         </div>
     </div>
-
-    {% for recipe in recipes %}
-        {{ recipe.name }}<br>
-        {{ recipe.diet }}<br>
-        {{ recipe.cooking_time }}<br>
-        {{ recipe.skill_level }}<br>
-        {{ recipe.serves }}<br>
-        {{ recipe.vegetarian }}<br>
-    {% endfor %}
 
     <div class="row">
         <div class="col s10 offset-s1 m5 offset-m1">
@@ -27,25 +18,35 @@
                     <img src="static/images/veg.jpg">
                     <span class="card-title">Vegetarian Recipes</span>
                 </div>
-                <div class="card-content">
+                <div class="font-style card-content">
                     <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
+                {% for recipe in recipes if recipe.diet == 'vegetarian' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">First</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Second</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Third</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <h6 class="font-style collapsible-header blue-grey lighten-5">{{ recipe.name }}</h6>
+                            <div class="collapsible-body">
+                                <i class="fas fa-leaf"></i>
+                                <strong class="font-style">
+                                    {{ recipe.diet }}</strong>
+                                <p class="font-style">
+                                    <i class="fas fa-clock"></i>
+                                    {{ recipe.cooking_time }}<br><br>
+                                    <i class="fas fa-utensils"></i>
+                                    {{ recipe.skill_level }}<br><br>
+                                    <i class="fas fa-users"></i>
+                                    {{ recipe.serves }}<br><br>
+                                    {{ recipe.vegetarian }}
+                                </p>
+                                <i class="fas fa-lemon"></i>
+                                <strong class="font-style">Ingredients</strong>
+                                <p class="whitespace font-style">{{ recipe.ingredients }}</p>
+                            </div>
                         </li>
                     </ul>
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -55,25 +56,34 @@
                     <img src="static/images/vegan.jpg">
                     <span class="card-title" id="vegan-title">Vegan Recipes</span>
                 </div>
-                <div class="card-content">
+                <div class="card-content font-style">
                     <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
+                    {% for recipe in recipes if recipe.diet == 'vegan' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">First</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Second</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Third</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
+                            <div class="collapsible-body">
+                                <i class="fas fa-carrot"></i>
+                                <strong class="font-style">{{ recipe.diet }}</strong>
+                                <p class="font-style">
+                                    <i class="fas fa-clock"></i>
+                                    {{ recipe.cooking_time }}<br><br>
+                                    <i class="fas fa-utensils"></i>
+                                    {{ recipe.skill_level }}<br><br>
+                                    <i class="fas fa-users"></i>
+                                    {{ recipe.serves }}<br><br>
+                                    {{ recipe.vegetarian }}
+                                </p>
+                                <i class="fas fa-lemon"></i>
+                                <strong class="font-style">Ingredients</strong>
+                                <p class="whitespace font-style">{{ recipe.ingredients }}</p>
+                            </div>
                         </li>
                     </ul>
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -85,25 +95,34 @@
                     <img src="static/images/meat.jpg">
                     <span class="card-title" id="meat-title">Meat Recipes</span>
                 </div>
-                <div class="card-content">
+                <div class="card-content font-style">
                     <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
+                    {% for recipe in recipes if recipe.diet == 'meat' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">First</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Second</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Third</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
+                            <div class="collapsible-body">
+                                <i class="fas fa-bacon"></i>
+                                <strong class="font-style">{{ recipe.diet }}</strong>
+                                <p class="font-style">
+                                    <i class="fas fa-clock"></i>
+                                    {{ recipe.cooking_time }}<br><br>
+                                    <i class="fas fa-utensils"></i>
+                                    {{ recipe.skill_level }}<br><br>
+                                    <i class="fas fa-users"></i>
+                                    {{ recipe.serves }}<br><br>
+                                    {{ recipe.vegetarian }}
+                                </p>
+                                <i class="fas fa-lemon"></i>
+                                <strong class="font-style">Ingredients</strong>
+                                <p class="whitespace font-style">{{ recipe.ingredients }}</p>
+                            </div>
                         </li>
                     </ul>
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -113,25 +132,34 @@
                     <img src="static/images/fish.jpg">
                     <span class="card-title">Fish Recipes</span>
                 </div>
-                <div class="card-content">
+                <div class="card-content font-style">
                     <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
+                    {% for recipe in recipes if recipe.diet == 'pescetarian' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">First</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Second</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <h6 class="collapsible-header blue-grey lighten-5">Third</h6>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
+                            <div class="collapsible-body recipe-info">
+                                <i class="fas fa-fish"></i>
+                                <strong class="font-style">{{ recipe.diet }}</strong>
+                                <p class="font-style">
+                                    <i class="fas fa-clock"></i>
+                                    {{ recipe.cooking_time }}<br><br>
+                                    <i class="fas fa-utensils"></i>
+                                    {{ recipe.skill_level }}<br><br>
+                                    <i class="fas fa-users"></i>
+                                    {{ recipe.serves }}<br><br>
+                                    {{ recipe.vegetarian }}
+                                </p>
+                                <i class="fas fa-lemon"></i>
+                                <strong class="font-style">Ingredients</strong>
+                                <p class="whitespace font-style">{{ recipe.ingredients }}</p>
+                            </div>
                         </li>
                     </ul>
+                {% endfor %}
                 </div>
             </div>
         </div>

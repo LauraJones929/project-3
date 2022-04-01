@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Indie+Flower&family=Montserrat:wght@400&display=swap');
 
-.navbar a, #register-title, #submit-btn, .input-text,
-#registration, #login-title, .card-title,
-.collapsible-header, .card-content {
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.font-style {
     font-family: 'Montserrat', 'sans-serif';
 }
 
@@ -21,4 +29,34 @@
 
 #vegan-title, #meat-title {
     color: black;
+}
+
+.whitespace {
+    white-space: pre-wrap;
+}
+
+#signup {
+    color: white;
+    text-decoration: underline 2px;
+}
+
+.page-footer {
+    padding-top: 0px;
+}
+
+#social-links i {
+    font-size: 3rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 993px) {
+    .hidden {
+        display: none;
+    }
+    
+    #social-links {
+        text-align: center;
+    }
+
 }

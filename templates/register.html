@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align" id="register-title">Register</h3>
+    <h3 class="center-align font-style" id="register-title">Register</h3>
 
     <div class="row">
         <form class="col s10 offset-s1 l6 offset-l3" method="POST" action="{{ url_for('register') }}">
@@ -33,14 +33,15 @@
             <div class="row">
                 <div class="input-field col s10 offset-s1 l8 offset-l2">
                     <input id="confirm_password" name="confirm_password" type="password"
-                        class="validate input-text" onkeyup='check();' required>
+                        class="validate input-text font-style" onkeyup='check();' required>
                     <label for="confirm_password">Password Confirmation</label>
                     <span id='message'></span>
                 </div>
             </div>
             <!-- register -->
             <div class="row">
-                <button type="submit" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="submit-btn">
+                <button type="submit" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1 font-style"
+                    id="submit-btn">
                     Sign Up
                 </button>
             </div>
