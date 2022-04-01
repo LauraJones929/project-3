@@ -23,8 +23,14 @@ body {
 }
 
 .card-title {
+    margin-top: 0;
     padding: 20px;
     color: white;
+}
+
+#recipe-panel {
+    padding: 0px;
+
 }
 
 #vegan-title, #meat-title {
@@ -40,6 +46,10 @@ body {
     text-decoration: underline 2px;
 }
 
+#signup:hover {
+    color: #9e9e9e;
+}
+
 .page-footer {
     padding-top: 0px;
 }
@@ -50,13 +60,13 @@ body {
     padding-right: 10px;
 }
 
+#social-links i:hover {
+    color: #9e9e9e;
+}
+
 @media screen and (max-width: 993px) {
     .hidden {
         display: none;
-    }
-    
-    #social-links {
-        text-align: center;
     }
 
 }
