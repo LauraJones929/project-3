@@ -34,7 +34,7 @@
                             id="my-recipes-link">My Recipes</a>
                         </li>
                         <li>
-                            <a href="#" id="add-recipe-link">Add A Recipe</a>
+                            <a href="{{ url_for('add_recipe') }}" id="add-recipe-link">Add A Recipe</a>
                         </li>
                         <li>
                             <a href="{{ url_for('logout') }}" id="logout-link">Logout</a>
@@ -63,7 +63,7 @@
                     id="my-recipes-link">My Recipes</a>
                 </li>
                 <li>
-                    <a href="#" id="add-recipe-link">Add A Recipe</a>
+                    <a href="{{ url_for('add_recipe') }}" id="add-recipe-link">Add A Recipe</a>
                 </li>
                 <li>
                     <a href="{{ url_for('logout') }}" id="logout-link">Logout</a>

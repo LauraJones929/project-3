@@ -1,108 +1,258 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Portfolio Project 3 - Data Centric Backend Development
 
-Welcome LauraJones929,
+Online Cookbook - Live Site
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+View Live Site
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Business Objectives
 
-## Gitpod Reminders
+As someone who thoroughly enjoys cooking but often struggles to relocate favourite recipes, I have designed and created a website that allows users to store all of their favourite recipes in one space. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The primary focus for this website is to provide a database for the user so that they can store and access their own chosen recipes with just a few clicks. Users will also be able to add and delete recipes as they please.
 
-`python3 -m http.server`
+The application is designed to be responsive to all screen sizes and accessible to all users, so that navigation is easy for everyone, no matter what device is being used. My goal is to achieve this with a visually appealing, interactive UX, which encourages users to:
+- store their favourite recipes
+- add/delete recipes as they choose
+- share the website with friends to encourage them to sign up
+- follow the company's social media platforms to see other users' recipes and ideas
 
-A blue button should appear to click: _Make Public_,
+Homepage Mockup
 
-Another blue button should appear to click: _Open Browser_.
+Client's Requests
+Since the pandemic restrictions have been lifted, Jess has a heavy number of enquiries coming in and an even larger number of people wanting to book her in. As Jess has always taking bookings and enquiries on her mobile phone, she is now struggling to keep track of her schedule and needs a platform that is more accessible and appropriate for managing her business.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+In order to create an informative and effective platform, these are the key features that the client has requested:
 
-A blue button should appear to click: _Make Public_,
+an 'About Me' section - this gives a detailed insight into who Jess Hynes is and what skills she possesses.
+media (images and videos) - these are displayed throughout the website. Embedded YouTube videos as well as background images to add the desired aesthetic. Images/videos are credited and sourced throughout.
+a list of packages - this informs potential clients/customers of Jess' packages that she has to offer.
+a contact form - to allow potential clients/customers to get in touch with any enquiries that they may have. As this project is HTML/CSS focused, the form is static and will send any messages submitted to the Code Institure form dump, until I have aquired further skills in order to be able to script in the necessary attributes and coding to send form input to a specific destination.
+social media links available at all times throughout site - this allows users to access Jess' social platforms if desired.
+User Experience (UX)
+User Stories
+First Time Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+As a first time visitor, I want to be able to quickly navigate through the site and see what style and aesthetic Jess brings as I'm interested in booking her for my wedding.
+As a first time visitor, I want to be able to locate Jess' social media links.
+As a business owner, I want to allow any potential clients to navigate through my site easily without getting lost or feeling overwhelmed as this could put people off and they may look elsewhere.
+Returning Visitor Goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+As a returning visitor, I want to be able to contact Jess to enquire about prices and availability.
+As a first time visitor, I want to find a link to be able to listen to Jess on Spotify or YouTube.
+As a business owner, I want to provide social media links that are easy to spot and access.
+Frequent Visitor Goals
 
-To log into the Heroku toolbelt CLI:
+As a frequent visitor, I want to see if there are any new packages available for cooperate events.
+As a business owner, I want to update any new videos or package offers onto my website.
+As a business owner, I want to be able to receive any queries or messages from potential customers via email.
+Design
+Colour Scheme
+Colour contrast checks were made throughout the process of building the project to save going back and re-doing colours that did not work together.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The main colour scheme is neutral and light, in order to highlight any darker text. As photographic images are used throughout the site, neutral colours will not take away any attention from the images that are put in place for promotional and decorative purposes.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+For backgrounds (body/header/footer) I have chosen to use white and off-white, a very subtle difference which is easy on the eyes for users. When looking back at any strategy planning regarding this project, the users are looking to potentially book the client to perform at an event, whether it is a wedding, a festival or a store opening, however most of her bookings do come from weddings, therefore I thought it was more appropriate to use softer colours, as opposed to bright and bold or too contrasting.
 
-------
+For any element background, including paragraphs, contact form and the contact icon, I have used a faint, low-key green that ties in nicely with the white tones. Green is known for its ability to induce calming and relaxing emotions which I think suits the style of music that the client has to offer, as well as creating a positive emotional response for users.
 
-## Release History
+The text throughout the site is a very dark grey as I thought black would be too contrasting and take away the soft, subtleness that I was aiming for.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Typography
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Fonts are imported into the CSS file via Google Fonts.
+To keep the website looking clean and neutral, a selection of 3 fonts is used throughout the website, 2 of which have a very similar look and feel.
+For the main heading which is the artists name, I have chosen to use the font family of 'Parisienne', with a fallback font of 'Cursive', in the event of the preferred font failing to import. This font will hopefully create a positive user experience when first entering the site as it exudes a professional yet warm mood.
+For sub-headings which includes the navigation menu, along with sub-titles across the page/s, I have chosen to use the font family of 'Raleway' as it stands clean and clear, making a statement but not enough to draw attention away from more important features on the page. In the event of this font failing, I have set the fallback font to 'Sans-serif'.
+For general text I have chosen the font family of 'Inter'. Again this is a clean and clear font that is easy to read, and maintains the neutral tone flowing throughout the site. Fallback font set to 'Sans-serif'.
+Text is responsive throughout the site and is easily readable across all screen sizes. 308px is the lowest breakpoint where the nav menu will appear outside of the header.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Imagery
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Photographic imagery is used throughout the site. Background imaging is used across the page to give the user a well rounded look and feel of the clients' aesthetic and style. Images are used to capture the essense of the artist and the height of the entertainment that she brings. After consideration, 2 background images will be used so as to not overload the page with distractions, this will also encourage the user to access the clients' social media via the link icons. Each image is provided by the client and is taken from her social media accounts. These images are credited and sourced appropriately in the credit section of the README file and in comments above the relevant code.
+The header will be fixed to the top of the page when scrolling so the user can navigate between sections without having to scroll back to the top. The footer is also fixed so that the user is aware of social media links, the client has requested that social media links be available at all times.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Videos that the client has recorded in her home studio have been embedded via iframe elements, sourced by YouTube. The videos respond to screen sizes so that they fill the screen width on smaller devices, and maintain an evenly spaced row on larger devices.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Wireframes
+Below are 3 links to show the initial drafts for each screen size. They show how I expect the responsivity between devices to go and how the structure of each page will look.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The project is designed with a desktop first approach. I felt this was more appropriate as the majority of the clients' bookings are made by businesses or store owners, who are more likely to be working from a desktop. The client has also specified that she will be accessing and managing the website from her own laptop.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Desktop Wireframe
+Tablet Wireframe
+Mobile Wireframe
+After initiating the project, I decided that I would no longer have separate pages on the website but instead I will have different sections that are clearly spaced and marked on one page. The user is able to navigate between sections via a fixed navigation menu. As there is not a great deal of text or content within each section, only what is needed, I thought this would be the best approach as separate pages would look too spacey or empty.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Some other changes that I made compared to the wireframe are as follows:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The text on each page does not overlay the background image. The background images now have their own section as I felt the overlaying would look too busy, and would not match the desired effect of subtlety.
+The textbox in the contact form is now under the name and email address input area, rather than to the right side of them.
+I have embedded 3 iframe videos instead of 5, as I felt 3 looked more pleasing to the eye when in a row.
+The event services are in a list on a single line (2 lines on smaller screen sizes) and positioned below the wedding packages, rather than in separate paragraphs.
+Various Mockups
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Features
+Existing Features
+Logo - located in the top-left of the header, the logo acts as a link to the landing page. As the header is fixed and visible at all times, the user can use either the logo or the nav menu to go back to the home section (top of the page)
+Logo
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Navigation bar - Sticks to the right side of the header which is fixed to the top of the page at all times. As this is a one page website, this will make it easier for users rather than having to scroll between in section. Hover effect creates a bottom border with a green colour to match the green colour that is often used throughout the page.
+Navbar
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Landing Page - On first entering the site, users will be drawn to hero image of the singer. This image uses warm colours and has a 'friendly' feel to it that invites the users in. From here they can easily navigate the site via the navigation menu or by scrolling.
+Images - Large background images (photographs) will draw the users' attention as they are brightly coloured and bold against the subtleness of the webpage. The images bring a "fun-ness" to the site, creating a positive emotional response.
+Text - Paragraphs throughout the site provides the user with some basic information about Jess, including her achievements and what she has to offer.
+Contact icon - An envelope icon is centered half way down the page, below the events services section, so that users can click this icon and be directly taken to the contact form.
+Videos - YouTube videos that Jess has recorded in her home studio are embedded via iframes, so the user can see what sounds and styles Jess brings to the table.
+Contact form - A static contact form is in place, currently sourced by HTML and CSS only. Any message submitted currently will be posted to the Code Institute form dump. After aquiring the skills to enable to me to make this an active form, users will be able to contact Jess via email with any enquiries that they may have.
+Contact form and Footer
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Footer - The footer is fixed so that social media links are visible and accessible at all times. Links are opened in a new tab. Currently the links will only take you to the social platforms home page, eventually I would like to link these up with the clients' social media accounts.
+Features yet to implement
+The logo is currently made using HTML text and CSS styling. I would like to aquire the skills to design and create a logo so that it could be embedded as an image.
+I would like to add some sort of interactive system, such as calendly, to select a wedding package or event service so users can set a date with Jess in accordance to her calendar.
+The videos as they are now clash quite a bit as they have different images when static. I would like to create an overlay that sits on top of the video, before being interacted with, so that they are of a consistent and common theme and colour, such as a background colour with the title of the song being sang in the video.
+The contact form currently sends any messages submitted to the CI form dump, this is because this project is purely based on HTML and CSS. I would like to set the form up so that the client can receive emails from users.
+Verification or feedback for the user after a message has been submitted on the form.
+Technologies Used
+Languages
+HTML - Used to build the main structure of the webpage.
+CSS - Used to style the content of the webpage.
+Libraries
+Hover.css - Used in the nav menu, submit button and all icons when hovered over (nav menu - bottom border, icons and button - change of colour)
+Google Fonts - Imbedded in the CSS, Google fonts are used in the header and body of the project.
+Font Awesome - Icons used for social media links as well as a link directly to the contact form.
+Balsamiq - Used to create wireframes for the project.
+Chrome Dev Tools - Heavily used to fix any spacing issues as well as testing responsivity.
+Github - To store repositories and codes after being pushed on Gitpod.
+Git - Used for version control and tracking changes made to files.
+Gitpod - Used for the workspace for this project.
+Multi Device Mockup Generator (techsini) - To create an image of what the project will look like on various devices. TechSini.com
+WebAIM Contrast Checker - To test colours throughout the site for whether or not they will produce good user experience.
+W3C Markup Validator - To check for any HTML or CSS errors. There were some errors such as open tags or incorrect CSS values. These were all corrected and the project was fortunately left with 0 errors.
+Testing
+Most testing was carried out via Google Chrome browser and the Chrome Dev Tools for responsivity and colour contrast checking, throughout the process of building the project. I also tested the site on an iPhone 12 for responsivity, this included Google Chrome which showed no errors, and on Safari which did show some issues regarding the background images that would often stick when scrolling. Additional testing was carried out which I will include below.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Manual Testing
+Navigation
 
-------
+All navigation links take user to the correct section within the page.
+All navigation links have a green underline and a bolder text when hovered over.
+Clicking the logo takes user back to the landing page.
+Navbar stays to the right of the header and responds well to different screen sizes.
+Events List
 
-## FAQ about the uptime script
+The dashes between each list item disappears when viewing on a mobile, as the list items are being displayed as columns.
+Contact Icon
 
-**Why have you added this script?**
+Clicking the icon takes users directly to the contact form.
+Changes size to suit different screen sizes.
+Iframes/Videos
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Videos do not play automatically when first entering the site.
+Videos play with no errors when clicked.
+Full screen option is enabled and works with no issues.
+Responsive with different screen sizes. Videos are displayed in a row for larger screen sizes and columns for smaller sizes.
+Contact Form
 
-**How will this affect me?**
+All input elements that have the required attribute are working as they should.
+The email address input element requires an @ for it to be valid.
+An error message appears if the inputs fields are not filled out appropriately.
+The page refreshes when the form has been filled out correctly and the submit button clicked.
+The submit button is clickable. Once I have aquired the skills to do so, I will create a modal or feedback of some sort that lets the user know that their message has been successfully sent.
+Social Media Links
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+All icons are clickable and take the user directly to the homepage of the specified social media platform. These will be linked up to the clients' own business social media accounts once the website is made to be genuine and accessible for the client.
+All href links have been entered correctly.
+Links open a new tab successfully.
+As well as Google Chrome and Safari, I have also tested the site on Firefox and Microsoft Edge. No issues or errors were identified and all content responded to different screen sizes as intended.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Additional Testing
+I used the a11y Contrast Checker to test all colours throughout the project. As you can see there has been one problem detected with the soft green colour I used for my h5 subtitles, the 'Music' text in the logo and the background colour of the contact form. I am happy to leave these colours as they are as I want to create a soft, subtle look to the entire site. By changing this soft, green tone to a more contrasting and vibrant tone, I fear that the intended look will be lost. After further testing on different screens, I can confidently say that the subtitles are easily read-able, and the form is easily seen, and are not at all lost in the background colour.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Colour Contrast Checker
 
-**So….?**
+I used the W3C Markup Validation and the W3C CSS Validator to ensure that there were no syntax errors throughout the project.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+W3C Markup Results
+W3C CSS Results
+User Story Testing
+User Story Testing
 
-**Can I opt out?**
+Known Bugs and Fixes
+During the process of building my project, I couldn't help but notice a vertical white space down the right side of the page (top to bottom), this was affecting the content and creating spacing and alignment issues.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+After doing some research online and speaking with a tutor, this was resolved using the following code:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Credits are included in the CSS comments and in the Credits section of the README file.
 
-**Anything more?**
+Code to fix whitespace
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+HTML lines 6-12
 
----
+When using the W3C Markup Validator, I received multipe warnings stating that the comments in my HTML code had more than 2 hyphens "!--------".
 
-Happy coding!
+This was resolved by removing the hyphens and leaving only 2 before and after the comment.
+An attribute of rel="noopener" was given to all untrusted external links, to improve best practise.
+
+As the footer is fixed to the bottom of the page, this meant that the bottom of the contact page would become hidden by the footer.
+
+This was resolved by creating a spacer div and adjusting the height accordingly with the different screen sizes.
+When creating the media queries I could not understand why the the responsivity was poor and the text was overlapping each other quite quickly when using Chrome Dev Tools to test.
+
+After speaking about this with my mentor, Felipe Souza Alarcon, he recommended that I don't use fixed heights for some of the elements, including the divs that were overlapping. Once I had gone back through the CSS and changed the height and width of certain elements, the problem was resolved.
+Deployment
+This project was created using Gitpod, which enabled me to stage and commit the files via Git (version control) and pushed into the respository on Github.
+
+To deploy the project on Github:
+Select the repository you wish to deploy.
+Click the Settings tab within that repository.
+In the Settings, scroll down and select Pages.
+In the Source section, click Branch and select the main option, click Save.
+The URL for the deployed project is now saved in Pages.
+Forking the Github Repository:
+Choose to fork the repository by making a copy. You can then make changes to the copy without it affecting the original repository.
+
+Select the repository you wish to fork.
+In the top right corner of the page (under your account icon) there will be an option to Fork.
+By selecting Fork you will now have a copy of the respository in your own Github account.
+Cloning the Github Repository:
+Select the repository you wish to clone locally.
+Above the files, locate the Code dropdown menu.
+Select and copy the link appropriately (HTTPS, SSH, Github CLI).
+Open the terminal and change the directory to where you want the cloned version to be located.
+Type git clone and paste the copied link.
+Press Enter to create local clone.
+Credits
+Code
+Stackoverflow Forums
+
+As stated in the comments of the CSS file (lines 4-5), for providing a solution to fix an issue regarding white space down the right side of the page.
+Brian, Program Director, Code Institute
+
+For giving me the idea to have the navbar on the right side of the header (custom CCS used).
+Matt Rudge, Code Institute
+
+For providing me the idea to use a hover effect on icons. I used this effect on the contact icon and social media icons (custom CSS styling was used).
+The idea for the style and layout for the contact form was inspired by the Love Running Project. Again, I used custom CSS styling.
+Maggie Walsh (fellow Stack member)
+
+For sharing advice with members regarding the basic structure of a README.md file.
+Media
+Jess Hynes (client)
+Providing the photographic images to use as hero images.
+Providing permission to use YouTube links to videos that she has recorded and uploaded from her home studio.
+Acknowledgements
+Code Institue Tutors
+
+For showing me guidance when using the display attribute to align content in rows and columns, so that it is spaced evenly across the page.
+Felipe Souza Alarcon, my Code Institute mentor throughout the course
+
+For continous support and professional guidance during the process of building my project.
+Fellow Slack Community members
+
+For responding when in times of need.
+Personal Development
+Following a session with my Code Institute mentor, I have noted that for future projects I will pay extra attention to how I am writing up CSS code, so that I don't end up with repetitive, unnecessary lines of code. In the meantime I am going to research different methods and ways of creating effective code that does not use a large amount of lines within the CSS file.
+
+After writing my Personal Development section I decided to go back into my CSS file and attempt to slim down on the amount of code being used. I was able to remove approx. 200 lines of code by testing with Chrome Dev Tools and removing any unnecessary or repetitive code.
