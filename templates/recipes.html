@@ -23,14 +23,14 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>               
                 <div class="card-action">
-                    {% for recipe in recipes if recipe.diet == 'Vegetarian' %}
+                    {% for recipe in recipes if recipe.diet_name == 'Vegetarian' %}
                         <ul class="collapsible">
                             <li>
-                                <h6 class="font-style collapsible-header blue-grey lighten-5">{{ recipe.name }}</h6>
+                                <h6 class="font-style collapsible-header blue-grey lighten-5">{{ recipe.recipe_name }}</h6>
                                 <div class="collapsible-body">
                                     <i class="fas fa-leaf"></i>
                                     <strong class="font-style">
-                                        {{ recipe.diet }}</strong>
+                                        {{ recipe.diet_name }}</strong>
                                     <p class="font-style">
                                         <i class="fas fa-clock"></i>
                                         {{ recipe.cooking_time }}<br><br>
@@ -38,7 +38,7 @@
                                         {{ recipe.skill_level }}<br><br>
                                         <i class="fas fa-users"></i>
                                         {{ recipe.serves }}<br><br>
-                                        {{ recipe.vegetarian }}
+                                        <p>Veggie Safe: {{ recipe.vegetarian }}</p>
                                     </p>
                                     <i class="fas fa-lemon"></i>
                                     <strong class="font-style">Ingredients</strong>
@@ -46,6 +46,7 @@
                                     <i class="fas fa-book"></i>
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
+                                <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
                                 </div>
                             </li>
                         </ul>
@@ -64,13 +65,13 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">              
-                    {% for recipe in recipes if recipe.diet == 'Vegan' %}
+                    {% for recipe in recipes if recipe.diet_name == 'Vegan' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
+                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.recipe_name }}</h6>
                             <div class="collapsible-body">
                                 <i class="fas fa-carrot"></i>
-                                <strong class="font-style">{{ recipe.diet }}</strong>
+                                <strong class="font-style">{{ recipe.diet_name }}</strong>
                                 <p class="font-style">
                                     <i class="fas fa-clock"></i>
                                     {{ recipe.cooking_time }}<br><br>
@@ -78,7 +79,7 @@
                                     {{ recipe.skill_level }}<br><br>
                                     <i class="fas fa-users"></i>
                                     {{ recipe.serves }}<br><br>
-                                    {{ recipe.vegetarian }}
+                                    <p>Veggie Safe: {{ recipe.vegetarian }}</p>
                                 </p>
                                 <i class="fas fa-lemon"></i>
                                 <strong class="font-style">Ingredients</strong>
@@ -86,6 +87,7 @@
                                 <i class="fas fa-book"></i>
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
+                                <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
                             </div>
                         </li>
                     </ul>
@@ -106,13 +108,13 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    {% for recipe in recipes if recipe.diet == 'Meat' %}
+                    {% for recipe in recipes if recipe.diet_name == 'Meat' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
+                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.recipe_name }}</h6>
                             <div class="collapsible-body">
                                 <i class="fas fa-bacon"></i>
-                                <strong class="font-style">{{ recipe.diet }}</strong>
+                                <strong class="font-style">{{ recipe.diet_name }}</strong>
                                 <p class="font-style">
                                     <i class="fas fa-clock"></i>
                                     {{ recipe.cooking_time }}<br><br>
@@ -120,7 +122,7 @@
                                     {{ recipe.skill_level }}<br><br>
                                     <i class="fas fa-users"></i>
                                     {{ recipe.serves }}<br><br>
-                                    {{ recipe.vegetarian }}
+                                    <p>Veggie Safe: {{ recipe.vegetarian }}</p>
                                 </p>
                                 <i class="fas fa-lemon"></i>
                                 <strong class="font-style">Ingredients</strong>
@@ -128,6 +130,7 @@
                                 <i class="fas fa-book"></i>
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
+                                <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
                             </div>
                         </li>
                     </ul>
@@ -146,13 +149,13 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    {% for recipe in recipes if recipe.diet == 'Pescetarian' %}
+                    {% for recipe in recipes if recipe.diet_name == 'Pescetarian' %}
                     <ul class="collapsible">
                         <li>
-                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
+                            <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.recipe_name }}</h6>
                             <div class="collapsible-body recipe-info">
                                 <i class="fas fa-fish"></i>
-                                <strong class="font-style">{{ recipe.diet }}</strong>
+                                <strong class="font-style">{{ recipe.diet_name }}</strong>
                                 <p class="font-style">
                                     <i class="fas fa-clock"></i>
                                     {{ recipe.cooking_time }}<br><br>
@@ -160,7 +163,7 @@
                                     {{ recipe.skill_level }}<br><br>
                                     <i class="fas fa-users"></i>
                                     {{ recipe.serves }}<br><br>
-                                    {{ recipe.vegetarian }}
+                                    <p>Veggie Safe: {{ recipe.vegetarian }}</p>
                                 </p>
                                 <i class="fas fa-lemon"></i>
                                 <strong class="font-style">Ingredients</strong>
@@ -168,6 +171,7 @@
                                 <i class="fas fa-book"></i>
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
+                                <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
                             </div>
                         </li>
                     </ul>

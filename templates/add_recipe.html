@@ -12,7 +12,8 @@
     </div>
 
     <div class="row">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe')}}">
+            <!-- Recipe name -->
             <div class="row">
                 <div class="input-field col s8 offset-s2 l6 offset-l3">
                     <i class="fas fa-pencil prefix"></i>
@@ -29,6 +30,7 @@
                       </div>
                 </div>
             </div>
+            <!-- Recipe information -->
             <div class="row">
                 <div class="input-field col s10 offset-s1 m4 offset-m2 l2 offset-l2">
                     <i class="fas fa-leaf prefix"></i>
@@ -54,11 +56,12 @@
                 </div>
                 <div class="input-field col s10 offset-s1 m4 l2">
                     <i class="fas fa-users prefix"></i>
-                    <input id="serves" name="serves" type="tel" class="font-style validate"
+                    <input id="serves" name="serves" type="text" class="font-style validate"
                         minlength="1" maxlength="5" placeholder="e.g. 3-4" required>
                     <label for="serves" class="font-style validate">Serves</label>
                 </div>
             </div>
+            <!-- Ingredients & Methods inputs -->
             <div class="row">
                 <div class="input-field col s10 offset-s1 m5 offset-m1 l4 offset-l2">
                     <i class="fas fa-lemon prefix"></i>
@@ -76,6 +79,14 @@
                     </textarea>
                     <label for="method" class="font-style validate">Method</label>
                 </div>
+            </div>
+            <!-- Submit button -->
+            <div class="row">
+                <button type="submit" class="col s10 offset-s1 m8 offset-m2 l4 offset-l4 
+                    btn-large blue-grey lighten-1"
+                    id="submit-btn">
+                    Add Recipe
+                </button>
             </div>
         </form>
     </div>
