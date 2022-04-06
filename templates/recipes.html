@@ -23,7 +23,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>               
                 <div class="card-action">
-                    {% for recipe in recipes if recipe.diet == 'vegetarian' %}
+                    {% for recipe in recipes if recipe.diet == 'Vegetarian' %}
                         <ul class="collapsible">
                             <li>
                                 <h6 class="font-style collapsible-header blue-grey lighten-5">{{ recipe.name }}</h6>
@@ -64,7 +64,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">              
-                    {% for recipe in recipes if recipe.diet == 'vegan' %}
+                    {% for recipe in recipes if recipe.diet == 'Vegan' %}
                     <ul class="collapsible">
                         <li>
                             <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
@@ -106,7 +106,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    {% for recipe in recipes if recipe.diet == 'meat' %}
+                    {% for recipe in recipes if recipe.diet == 'Meat' %}
                     <ul class="collapsible">
                         <li>
                             <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
@@ -146,7 +146,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    {% for recipe in recipes if recipe.diet == 'pescetarian' %}
+                    {% for recipe in recipes if recipe.diet == 'Pescetarian' %}
                     <ul class="collapsible">
                         <li>
                             <h6 class="collapsible-header blue-grey lighten-5 font-style">{{ recipe.name }}</h6>
