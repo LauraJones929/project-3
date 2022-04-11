@@ -119,6 +119,31 @@ def add_recipe():
     return render_template("add_recipe.html", diets=diets, skills=skills)
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        vegetarian = "on" if request.form.get("vegetarian-switch") else "off"
+        edit = {"$set": {
+            "diet_name": request.form.get("diet_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "vegetarian": vegetarian,
+            "cooking_time": request.form.get("cooking_time"),
+            "skill_level": request.form.get("skill_level"),
+            "serves": request.form.get("serves"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "created_by": session["user"]
+        }}
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, edit)
+        flash("Recipe Successfully Updated!")
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    diets = mongo.db.categories.find().sort("diet_name", 1)
+    skills = mongo.db.recipes.find().sort("skill_level", 1)
+    return render_template("edit_recipe.html", recipe=recipe,
+        diets=diets, skills=skills)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

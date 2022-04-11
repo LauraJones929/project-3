@@ -31,10 +31,9 @@
             </div>
             <!-- new user -->
             <div class="row">
-                <button onclick="window.location.href='register.html'" type="submit"
-                    class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="new-user-btn">
-                    New User? Click to Register
-                </button>
+                <a href="{{ url_for('register') }}" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1"
+                    id="new-user-btn">New User? Click to Register
+                </a>
             </div>
         </form>
     </div>

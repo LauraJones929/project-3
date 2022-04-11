@@ -47,8 +47,11 @@
                                     <strong class="font-style">Method</strong>
                                     <p class="whitespace font-style">{{ recipe.method }}</p>
                                     <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
-                                    <a class="btn-small blue-grey lighten-1">Edit</a>
-                                    <a class="btn-small blue-grey lighten-1">Delete</a>
+                                    {% if session.user == recipe.created_by %}
+                                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                            class="btn-small blue-grey lighten-1">Edit</a>
+                                        <a href="#" class="btn-small blue-grey lighten-1">Delete</a>
+                                    {% endif %}
                                 </div>
                             </li>
                         </ul>
@@ -90,8 +93,11 @@
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
                                 <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
-                                <a class="btn-small blue-grey lighten-1">Edit</a>
-                                <a class="btn-small blue-grey lighten-1">Delete</a>
+                                {% if session.user == recipe.created_by %}
+                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                        class="btn-small blue-grey lighten-1">Edit</a>
+                                    <a href="#" class="btn-small blue-grey lighten-1">Delete</a>
+                                {% endif %}
                             </div>
                         </li>
                     </ul>
@@ -135,8 +141,11 @@
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
                                 <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
-                                <a class="btn-small blue-grey lighten-1">Edit</a>
-                                <a class="btn-small blue-grey lighten-1">Delete</a>
+                                {% if session.user == recipe.created_by %}
+                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                        class="btn-small blue-grey lighten-1">Edit</a>
+                                    <a href="#" class="btn-small blue-grey lighten-1">Delete</a>
+                                {% endif %}
                             </div>
                         </li>
                     </ul>
@@ -178,8 +187,11 @@
                                 <strong class="font-style">Method</strong>
                                 <p class="whitespace font-style">{{ recipe.method }}</p>
                                 <p><em>Recipe created by: {{ recipe.created_by }}</em></p>
-                                <a class="btn-small blue-grey lighten-1">Edit</a>
-                                <a class="btn-small blue-grey lighten-1">Delete</a>
+                                {% if session.user == recipe.created_by %}
+                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                        class="btn-small blue-grey lighten-1">Edit</a>
+                                    <a href="#" class="btn-small blue-grey lighten-1">Delete</a>
+                                {% endif %}
                             </div>
                         </li>
                     </ul>
