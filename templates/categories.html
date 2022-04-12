@@ -4,6 +4,14 @@
     <h3 class="font-style card-title center-align" id="categories">Diet Categories</h3>
 
     <div class="row">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_category') }}" class="btn-large blue-grey lighten-1">
+                Add Diet Category
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
         {% for diet in diets %}
             <div class="col s12 m3">
                 <div class="card blue-grey lighten-3 center-align">
@@ -12,8 +20,8 @@
                         <span class="card-title">{{ diet.diet_name }}</span>
                     </div>
                     <div class="card-action">
-                        <a href="#" class="btn blue-grey lighten-1">This is a link</a>
-                        <a href="#" class="btn blue-grey lighten-1">This is a link</a>
+                        <a href="#" class="btn blue-grey lighten-1">Edit</a>
+                        <a href="#" class="btn blue-grey lighten-1">Delete</a>
                     </div>
                 </div>
             </div>
