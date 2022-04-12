@@ -18,17 +18,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# renders the landing page template
 @app.route("/")
 def index():
     return render_template("index.html")
 
 
+# renders the Recipes page and retrieves data from mongo db
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+# allows users to filter documents from the db
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -36,6 +39,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# allows users to register a new account
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == 'POST':
@@ -59,6 +63,7 @@ def register():
     return render_template("register.html")
 
 
+# allows users to log into their account
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -70,22 +75,25 @@ def login():
             # checks user input matches hashed password
             if check_password_hash(
                 user_exists["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Hello, {}! You have successfully logged in!".format(
-                        request.form.get("username")))
-                    return redirect(url_for("profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Hello, {}! You have successfully logged in!".format(
+                    request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
-                flash("Uh oh! You have entered an incorrect Username and/or Password")
+                flash(
+                    "Uh oh! You have entered an incorrect Username and/or Password")
                 return redirect(url_for("login"))
         else:
             # username doesn't exist
-            flash("Uh oh! You have entered an incorrect Username and/or Password")
+            flash(
+                "Uh oh! You have entered an incorrect Username and/or Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
 
 
+# redirects user to profile template upon logging in successfully
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # fetch session user's username from db
@@ -98,6 +106,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# allows users to log out
 @app.route("/logout")
 def logout():
     # removes user from session cookies
@@ -106,6 +115,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# allows users to add new recipe and posts to db
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -130,6 +140,7 @@ def add_recipe():
     return render_template("add_recipe.html", diets=diets, skills=skills)
 
 
+# allows users to edit a recipe and posts to db
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -155,6 +166,7 @@ def edit_recipe(recipe_id):
         diets=diets, skills=skills)
 
 
+# allows users to delete a recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
@@ -162,12 +174,14 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# renders the categories template
 @app.route("/get_categories")
 def get_categories():
     diets = list(mongo.db.categories.find().sort("diet_name", 1))
     return render_template("categories.html", diets=diets)
 
 
+# allows users to add a category and posts to db
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -181,6 +195,7 @@ def add_category():
     return render_template("add_category.html")
 
 
+# allows users to edit a category and posts to db
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -195,6 +210,7 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# allows users to delete a catory
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})

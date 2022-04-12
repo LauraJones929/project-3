@@ -1,8 +1,13 @@
+// Initialize collapsible sidenav
+// From Materialize
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
 });
 
+// Checks first & second passwords for a match when registering
 const check = function() {
     if (document.getElementById('password').value ==
         document.getElementById('confirm_password').value) {
@@ -14,16 +19,8 @@ const check = function() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems);
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, options);
-});
-
+// Initialises the Select element and shows options
+// From Materialize
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);

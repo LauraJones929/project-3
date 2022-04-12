@@ -3,6 +3,7 @@
 
     <h3 class="font-style card-title center-align" id="recipes-title">My Recipes</h3>
 
+    <!-- search form allowing users to filter through data in db -->
     <div class="row card-panel">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
             <div class="row valign-wrapper center-align">
@@ -20,9 +21,11 @@
         </form>
     </div>
 
+    <!-- if filter has more than 1 result, display result -->
     {% if recipes|length > 0 %}
 
     <div class="row">
+        <!-- vegetarian recipes fetched from db-->
         <div class="col s10 offset-s1 m5 offset-m1">
             <div class="card">
                 <div class="card-image">
@@ -32,7 +35,8 @@
                 <div class="font-style card-content">
                     <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
-                </div>               
+                </div>
+                <!-- loops through db and fetches all recipes that are vegetarian -->
                 <div class="card-action">
                     {% for recipe in recipes if recipe.diet_name == 'Vegetarian' %}
                         <ul class="collapsible">
@@ -71,6 +75,7 @@
                 </div>
             </div>
         </div>
+        <!-- vegan recipes fetched from db-->
         <div class="col s10 offset-s1 m5">
             <div class="card">
                 <div class="card-image">
@@ -81,7 +86,8 @@
                     <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
-                <div class="card-action">              
+                <div class="card-action">
+                    <!-- loops through db and fetches all recipes that are vegan -->
                     {% for recipe in recipes if recipe.diet_name == 'Vegan' %}
                     <ul class="collapsible">
                         <li>
@@ -120,6 +126,7 @@
         </div>
     </div>
     <div class="row">
+        <!-- meat recipes fetched from db-->
         <div class="col s10 offset-s1 m5 offset-m1">
             <div class="card">
                 <div class="card-image">
@@ -131,6 +138,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
+                    <!-- loops through db and fetches all recipes that are meat -->
                     {% for recipe in recipes if recipe.diet_name == 'Meat' %}
                     <ul class="collapsible">
                         <li>
@@ -167,6 +175,7 @@
                 </div>
             </div>
         </div>
+        <!-- pescetarian recipes fetched from db-->
         <div class="col s10 offset-s1 m5">
             <div class="card">
                 <div class="card-image">
@@ -178,6 +187,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
+                    <!-- loops through db and fetches all recipes that are pescetarian -->
                     {% for recipe in recipes if recipe.diet_name == 'Pescetarian' %}
                     <ul class="collapsible">
                         <li>
