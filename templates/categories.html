@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="font-style card-title center-align" id="categories">Diet Categories</h3>
+
+    <div class="row">
+        {% for diet in diets %}
+            <div class="col s12 m3">
+                <div class="card blue-grey lighten-3 center-align">
+                    <div class="card-image">
+                        <img src="/static/images/landing.jpg">
+                        <span class="card-title">{{ diet.diet_name }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn blue-grey lighten-1">This is a link</a>
+                        <a href="#" class="btn blue-grey lighten-1">This is a link</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

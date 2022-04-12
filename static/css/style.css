@@ -5,17 +5,52 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Montserrat', 'sans-serif';
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
+
+.brand-logo {
+    margin-left: 20px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.landing-page {
+    height: 100vh;
+    width: 100vw;
+    background: url("../images/landing.jpg") center center;
+    background-size: cover;
+    opacity: 0.9;
+    filter: brightness(80%);
+}
+
+.heading1 {
+    text-shadow: 20px;
+    position: absolute;
+    font-weight: 600;
+    left: 10%;
+    margin-right: 25px;
+    top: 30%;
+}
+
+.heading2 {
+    position: absolute;
+    bottom: 150px;
+    margin: 0 20px;
+}
 
 .font-style {
     font-family: 'Montserrat', 'sans-serif';
 }
 
-#register-title, #registration, #login-title {
+#register-title, #registration, #login-title,
+#categories {
     color: #9e9e9e;
 }
 
@@ -68,6 +103,10 @@ body {
 @media screen and (max-width: 993px) {
     .hidden {
         display: none;
+    }
+
+    .brand-logo {
+        margin-left: 0;
     }
 
 }

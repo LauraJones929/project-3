@@ -8,7 +8,7 @@
             <!-- username -->
             <div class="row">
                 <div class="input-field col s10 offset-s1 l8 offset-l2">
-                    <input id="username" name="username" type="text" minlength="8"
+                    <input id="username" name="username" type="text" minlength="4"
                         maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate input-text" required>
                     <label for="username">Username</label>
                 </div>
@@ -46,10 +46,9 @@
                 </button>
             </div>
             <div class="row">
-                <button onclick="window.location.href='login.html'" type="submit"
-                    class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1" id="new-user-btn">
-                    Already Registered? Click to log in.
-                </button>
+                <a href="{{ url_for('login') }}" class="col s10 offset-s1 m8 offset-m2 btn-large blue-grey lighten-1"
+                    id="new-user-btn">Already registered? Click to log in.
+                </a>
             </div>
         </form>
     </div>
