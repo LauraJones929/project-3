@@ -139,5 +139,10 @@ main {
     .brand-logo {
         margin-left: 0;
     }
+}
 
+@media screen and (max-width: 382px) {
+    .brand-logo {
+        font-size: 2rem;
+    }
 }

@@ -2,7 +2,7 @@
 
 ## Online Cookbook - Live Site
 
-View Live Site
+[View Live Site](http://flask-cookbook-project-3.herokuapp.com/)
 
 ## Business Objectives
 
