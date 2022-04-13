@@ -128,9 +128,21 @@ Each recipe has a edit & delete button. By clicking the *edit* button, users are
 
 **Manage Categories Page**
 
-
+This page is restricted to the admin only, where they can choose to create, update or delete diet categories.
 
 ![Manage Categories Page Wireframe](/documentation/images/wireframe-imgs/managecategories.jpg)
+
+**Add Category Page**
+
+After clicking the *Add Category* button on the previous page, users can populate the input field with a new category.
+
+![Add Categories Page Wireframe](/documentation/images/wireframe-imgs/addcategory.jpg)
+
+**Edit Diet Category Page**
+
+After clicking the *Edit* button on a specific category card, users can populate the input field with the updated category.
+
+![Edit Category Page Wireframe](/documentation/images/wireframe-imgs/editcategory.jpg)
 
 ## Features
 ### Existing Features
