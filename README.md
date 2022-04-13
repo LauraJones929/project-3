@@ -73,7 +73,7 @@ The Manage Categories page consists of 4 images for each category, these images 
 ![Various Imagery](/documentation/images/features/imagery.jpg)
 
 ## Wireframes
-Wireframes for the original design concepts were created using [Balsamiq.](https://balsamiq.com/wireframes/)
+Wireframes for the original design concepts across all devices were created using [Balsamiq.](https://balsamiq.com/wireframes/)
 
 **Home Page**
 
@@ -81,15 +81,56 @@ The landing page explains the purpose of the site to new and returning users thr
 
 ![Home Page Wireframe](/documentation/images/wireframe-imgs/landingpage.jpg)
 
-![Log-in Page Wireframe](/documentation/images/wireframe-imgs/loginpage.jpg)
+**Register Page**
 
-Some other changes that I made compared to the wireframe are as follows:
+Register page enables the user to create unique log-in credentials based on an alphanumeric Username and alphanumeric Password. Back-end logic tests for duplicate entries and password confirmation.
 
-The text on each page does not overlay the background image. The background images now have their own section as I felt the overlaying would look too busy, and would not match the desired effect of subtlety.
-The textbox in the contact form is now under the name and email address input area, rather than to the right side of them.
-I have embedded 3 iframe videos instead of 5, as I felt 3 looked more pleasing to the eye when in a row.
-The event services are in a list on a single line (2 lines on smaller screen sizes) and positioned below the wedding packages, rather than in separate paragraphs.
-Various Mockups
+![Register Page Wireframe](/documentation/images/wireframe-imgs/register.jpg)
+
+**Log-in Page**
+
+For returning users there is a log-in page to enable access to the full functionality of the site.
+
+![Log-in Page Wireframe](/documentation/images/wireframe-imgs/login.jpg)
+
+**Profile Page**
+
+Upon successful registration or logging in, users are directed to their profile page, consisting of a welcome message that contains the session users' username.
+
+![Profile Page Wireframe](/documentation/images/wireframe-imgs/profile.jpg)
+
+**Recipe Page**
+
+The Recipe page is the main attraction/functionality of the site. By retrieving the data from the Mongo database, recipes are displayed by category for the user to access. Users are also able to search and filter recipes by entering a recipe name or diet category.
+
+![Recipes Page Wireframe](/documentation/images/wireframe-imgs/myrecipes.jpg)
+
+**Add Recipe Page**
+
+Users can add a recipe by filling out the following input fields:
+
+- Recipe Name
+- Veggie Safe (on/off switch)
+- Diet Category
+- Cooking Time
+- Cooking Skill Level
+- Serves (how many)
+- Ingredients
+- Method
+
+![Add a Recipe Page Wireframe](/documentation/images/wireframe-imgs/addrecipe.jpg)
+
+**Edit Recipe Page**
+
+Each recipe has a edit & delete button. By clicking the *edit* button, users are directed to the Edit Recipe page, where all fields hold the value of the already submitted recipe. Users can change the input text as necessary and update to the database.
+
+![Edit a Recipe Page Wireframe](/documentation/images/wireframe-imgs/editrecipe.jpg)
+
+**Manage Categories Page**
+
+
+
+![Manage Categories Page Wireframe](/documentation/images/wireframe-imgs/managecategories.jpg)
 
 ## Features
 ### Existing Features
