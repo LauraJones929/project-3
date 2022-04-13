@@ -32,10 +32,6 @@
                     <img src="static/images/veg.jpg">
                     <span class="card-title">Vegetarian Recipes</span>
                 </div>
-                <div class="font-style card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
                 <!-- loops through db and fetches all recipes that are vegetarian -->
                 <div class="card-action">
                     {% for recipe in recipes if recipe.diet_name == 'Vegetarian' %}
@@ -81,10 +77,6 @@
                 <div class="card-image">
                     <img src="static/images/vegan.jpg">
                     <span class="card-title" id="vegan-title">Vegan Recipes</span>
-                </div>
-                <div class="card-content font-style">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
                     <!-- loops through db and fetches all recipes that are vegan -->
@@ -133,10 +125,6 @@
                     <img src="static/images/meat.jpg">
                     <span class="card-title" id="meat-title">Meat Recipes</span>
                 </div>
-                <div class="card-content font-style">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                </div>
                 <div class="card-action">
                     <!-- loops through db and fetches all recipes that are meat -->
                     {% for recipe in recipes if recipe.diet_name == 'Meat' %}
@@ -181,10 +169,6 @@
                 <div class="card-image">
                     <img src="static/images/fish.jpg">
                     <span class="card-title">Fish Recipes</span>
-                </div>
-                <div class="card-content font-style">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
                     <!-- loops through db and fetches all recipes that are pescetarian -->
