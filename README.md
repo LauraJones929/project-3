@@ -11,80 +11,77 @@ As someone who thoroughly enjoys cooking but often struggles to relocate favouri
 The primary focus for this website is to provide a database for the user so that they can store and access their own chosen recipes with just a few clicks. Users will also be able to add and delete recipes as they please.
 
 The application is designed to be responsive to all screen sizes and accessible to all users, so that navigation is easy for everyone, no matter what device is being used. My goal is to achieve this with a visually appealing, interactive UX, which encourages users to:
-- store their favourite recipes
-- add/delete recipes as they choose
+- store their favourite recipes in an organised manner
+- create/update/delete recipes as they choose
 - share the website with friends and family to encourage them to sign up
 - follow the company's social media platforms to see other users' recipes and ideas
 
 ## Homepage Mockup
 
-## Client's Requests
-Since the pandemic restrictions have been lifted, Jess has a heavy number of enquiries coming in and an even larger number of people wanting to book her in. As Jess has always taking bookings and enquiries on her mobile phone, she is now struggling to keep track of her schedule and needs a platform that is more accessible and appropriate for managing her business.
-
-In order to create an informative and effective platform, these are the key features that the client has requested:
-
-an 'About Me' section - this gives a detailed insight into who Jess Hynes is and what skills she possesses.
-media (images and videos) - these are displayed throughout the website. Embedded YouTube videos as well as background images to add the desired aesthetic. Images/videos are credited and sourced throughout.
-a list of packages - this informs potential clients/customers of Jess' packages that she has to offer.
-a contact form - to allow potential clients/customers to get in touch with any enquiries that they may have. As this project is HTML/CSS focused, the form is static and will send any messages submitted to the Code Institure form dump, until I have aquired further skills in order to be able to script in the necessary attributes and coding to send form input to a specific destination.
-social media links available at all times throughout site - this allows users to access Jess' social platforms if desired.
-
 ## User Experience (UX)
 ### User Stories
-First Time Visitor Goals
+**First Time Visitor Goals**
 
-As a first time visitor, I want to be able to quickly navigate through the site and see what style and aesthetic Jess brings as I'm interested in booking her for my wedding.
-As a first time visitor, I want to be able to locate Jess' social media links.
-As a business owner, I want to allow any potential clients to navigate through my site easily without getting lost or feeling overwhelmed as this could put people off and they may look elsewhere.
-Returning Visitor Goals
+- As a first time visitor, I want to understand what the site's purpose is so that I know whether or not if I want to explore further.
 
-As a returning visitor, I want to be able to contact Jess to enquire about prices and availability.
-As a first time visitor, I want to find a link to be able to listen to Jess on Spotify or YouTube.
-As a business owner, I want to provide social media links that are easy to spot and access.
-Frequent Visitor Goals
+- As a first time visitor, I want to be able to easily register so I can access the rest of the site.
 
-As a frequent visitor, I want to see if there are any new packages available for cooperate events.
-As a business owner, I want to update any new videos or package offers onto my website.
-As a business owner, I want to be able to receive any queries or messages from potential customers via email.
+**Returning Visitor Goals**
+- As a returning user, I want to upload my favourite recipes and store them so they are easily accessible for another time.
+
+- As a returning user, I want to manage my recipes by creating, updating and deleting them when necessary.
+
+**Frequent Visitor Goals**
+- As a frequent user, I want to be able to follow the company's social media platforms so that I can follow them and share my own recipes with them.
+
+- As a frequent user, I want to be able to store a large variety of recipes in separate categories, in an organised manner, that are easy to locate when I need them.
+
+**Site Owner Goals**
+- As a site owner, I need to enforce some basic access control when a user is editing or deleting data in order to prevent unauthorised editing or deletion of user uploaded data.
 
 ## Design
 ### Colour Scheme
 Colour contrast checks were made throughout the process of building the project to save going back and re-doing colours that did not work together.
 
-The main colour scheme is neutral and light, in order to highlight any darker text. As photographic images are used throughout the site, neutral colours will not take away any attention from the images that are put in place for promotional and decorative purposes.
+The main colour scheme is clean and crisp, using different shades of *blue-grey* and *white*, in order to keep the site neutral. The look and feel I wanted to go for was the same look you want to go for with a clean kitchen. People feel most inspired to cook a nice meal when they have a fresh, clean looking kitchen. I wanted that same inspiration throughout the site, and that encourages users to keep their recipes organised.
 
-For backgrounds (body/header/footer) I have chosen to use white and off-white, a very subtle difference which is easy on the eyes for users. When looking back at any strategy planning regarding this project, the users are looking to potentially book the client to perform at an event, whether it is a wedding, a festival or a store opening, however most of her bookings do come from weddings, therefore I thought it was more appropriate to use softer colours, as opposed to bright and bold or too contrasting.
+There are some photographic images throughout, to tie in well with the theme of the site. These images are used on the landing page, and the recipe and category cards.
 
-For any element background, including paragraphs, contact form and the contact icon, I have used a faint, low-key green that ties in nicely with the white tones. Green is known for its ability to induce calming and relaxing emotions which I think suits the style of music that the client has to offer, as well as creating a positive emotional response for users.
+![Recipe Cards](documentation/images/features/photo.jpg)
 
-The text throughout the site is a very dark grey as I thought black would be too contrasting and take away the soft, subtleness that I was aiming for.
+The text throughout the site is either white against the blue-grey background, or a dark grey/black against a white background, in order to keep the clean, crisp look throughout the site.
 
 ### Typography
 
 Fonts are imported into the CSS file via Google Fonts.
-To keep the website looking clean and neutral, a selection of 3 fonts is used throughout the website, 2 of which have a very similar look and feel.
-For the main heading which is the artists name, I have chosen to use the font family of 'Parisienne', with a fallback font of 'Cursive', in the event of the preferred font failing to import. This font will hopefully create a positive user experience when first entering the site as it exudes a professional yet warm mood.
-For sub-headings which includes the navigation menu, along with sub-titles across the page/s, I have chosen to use the font family of 'Raleway' as it stands clean and clear, making a statement but not enough to draw attention away from more important features on the page. In the event of this font failing, I have set the fallback font to 'Sans-serif'.
-For general text I have chosen the font family of 'Inter'. Again this is a clean and clear font that is easy to read, and maintains the neutral tone flowing throughout the site. Fallback font set to 'Sans-serif'.
-Text is responsive throughout the site and is easily readable across all screen sizes. 308px is the lowest breakpoint where the nav menu will appear outside of the header.
+
+To keep up with the clean and neutral look of the site, I chose to use just one font that is easy and simple to read.
+I have chosen to use the font family of 'Montserrat', with a fallback font of 'san-serif', in the event of the preferred font failing to import. This font will hopefully create a positive user experience when first entering the site as it exudes a professional yet simplistic mood.
+
+![Monseratt font](documentation/images/features/font.jpg)
 
 ### Imagery
 
-Photographic imagery is used throughout the site. Background imaging is used across the page to give the user a well rounded look and feel of the clients' aesthetic and style. Images are used to capture the essense of the artist and the height of the entertainment that she brings. After consideration, 2 background images will be used so as to not overload the page with distractions, this will also encourage the user to access the clients' social media via the link icons. Each image is provided by the client and is taken from her social media accounts. These images are credited and sourced appropriately in the credit section of the README file and in comments above the relevant code.
-The header will be fixed to the top of the page when scrolling so the user can navigate between sections without having to scroll back to the top. The footer is also fixed so that the user is aware of social media links, the client has requested that social media links be available at all times.
+Photographic imagery is used in some parts of the site. The landing page consists of a header, background image and a footer. The image has been slightly darkened and the opacity reduced so that it wasn't too vibrant against the subtle colours of the header and footer.
 
-Videos that the client has recorded in her home studio have been embedded via iframe elements, sourced by YouTube. The videos respond to screen sizes so that they fill the screen width on smaller devices, and maintain an evenly spaced row on larger devices.
+This image gives the user a good idea of what the site is about upon entering. The appealing image of fresh food should give the user motivation to explore the site further.
+
+The Recipes page that contains all of the users' recipes consists of 4 diet specific categories. Each category has a card element containing an image related to that category, e.g. an image of a vegetable curry for the vegetable category.
+
+The Manage Categories page consists of 4 images for each category, these images are the same for each category for ease which I may change at a later date.
+
+![Various Imagery](/documentation/images/features/imagery.jpg)
 
 ## Wireframes
-Below are 3 links to show the initial drafts for each screen size. They show how I expect the responsivity between devices to go and how the structure of each page will look.
+Wireframes for the original design concepts were created using [Balsamiq.](https://balsamiq.com/wireframes/)
 
-The project is designed with a desktop first approach. I felt this was more appropriate as the majority of the clients' bookings are made by businesses or store owners, who are more likely to be working from a desktop. The client has also specified that she will be accessing and managing the website from her own laptop.
+**Home Page**
 
-Desktop Wireframe
-Tablet Wireframe
-Mobile Wireframe
+The landing page explains the purpose of the site to new and returning users through imagery and subheadings. Functionality is limited from this page as users are only able to register, log-in or visit the company's social media platforms.
 
-After initiating the project, I decided that I would no longer have separate pages on the website but instead I will have different sections that are clearly spaced and marked on one page. The user is able to navigate between sections via a fixed navigation menu. As there is not a great deal of text or content within each section, only what is needed, I thought this would be the best approach as separate pages would look too spacey or empty.
+![Home Page Wireframe](/documentation/images/wireframe-imgs/landingpage.jpg)
+
+![Log-in Page Wireframe](/documentation/images/wireframe-imgs/loginpage.jpg)
 
 Some other changes that I made compared to the wireframe are as follows:
 
