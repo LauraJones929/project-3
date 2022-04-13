@@ -131,13 +131,14 @@ main {
 
 /* -- Media Queries -- */
 
-@media screen and (max-width: 993px) {
+@media screen and (max-width: 992px) {
     .hidden {
         display: none;
     }
 
     .brand-logo {
         margin-left: 0;
+        left: 30%;
     }
 }
 
