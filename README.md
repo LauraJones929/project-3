@@ -191,100 +191,62 @@ Although certain security features were not required for this project I have cho
 
 
 ### Features yet to implement
-The logo is currently made using HTML text and CSS styling. I would like to aquire the skills to design and create a logo so that it could be embedded as an image.
-I would like to add some sort of interactive system, such as calendly, to select a wedding package or event service so users can set a date with Jess in accordance to her calendar.
-The videos as they are now clash quite a bit as they have different images when static. I would like to create an overlay that sits on top of the video, before being interacted with, so that they are of a consistent and common theme and colour, such as a background colour with the title of the song being sang in the video.
-The contact form currently sends any messages submitted to the CI form dump, this is because this project is purely based on HTML and CSS. I would like to set the form up so that the client can receive emails from users.
-Verification or feedback for the user after a message has been submitted on the form.
+
 
 ## Technologies Used
 ### Languages
-HTML - Used to build the main structure of the webpage.
-CSS - Used to style the content of the webpage.
+- HTML5
+- CSS3
+- Python
+- JavaScript
 
-### Libraries
-Hover.css - Used in the nav menu, submit button and all icons when hovered over (nav menu - bottom border, icons and button - change of colour)
-Google Fonts - Imbedded in the CSS, Google fonts are used in the header and body of the project.
-Font Awesome - Icons used for social media links as well as a link directly to the contact form.
-Balsamiq - Used to create wireframes for the project.
-Chrome Dev Tools - Heavily used to fix any spacing issues as well as testing responsivity.
-Github - To store repositories and codes after being pushed on Gitpod.
-Git - Used for version control and tracking changes made to files.
-Gitpod - Used for the workspace for this project.
-Multi Device Mockup Generator (techsini) - To create an image of what the project will look like on various devices. TechSini.com
-WebAIM Contrast Checker - To test colours throughout the site for whether or not they will produce good user experience.
-W3C Markup Validator - To check for any HTML or CSS errors. There were some errors such as open tags or incorrect CSS values. These were all corrected and the project was fortunately left with 0 errors.
-Testing
-Most testing was carried out via Google Chrome browser and the Chrome Dev Tools for responsivity and colour contrast checking, throughout the process of building the project. I also tested the site on an iPhone 12 for responsivity, this included Google Chrome which showed no errors, and on Safari which did show some issues regarding the background images that would often stick when scrolling. Additional testing was carried out which I will include below.
 
-## Manual Testing
-Navigation
+### Libraries/Integrations
 
-All navigation links take user to the correct section within the page.
-All navigation links have a green underline and a bolder text when hovered over.
-Clicking the logo takes user back to the landing page.
-Navbar stays to the right of the header and responds well to different screen sizes.
-Events List
+- Flask - Flask micro-framework, links with jinja to create the webpages.
 
-The dashes between each list item disappears when viewing on a mobile, as the list items are being displayed as columns.
-Contact Icon
+- Jinja - The project uses the Jinja templating engine.
 
-Clicking the icon takes users directly to the contact form.
-Changes size to suit different screen sizes.
-Iframes/Videos
+- Materialize CSS - Grid system as well as other elements used throughout the site.
 
-Videos do not play automatically when first entering the site.
-Videos play with no errors when clicked.
-Full screen option is enabled and works with no issues.
-Responsive with different screen sizes. Videos are displayed in a row for larger screen sizes and columns for smaller sizes.
-Contact Form
+- Hover.css - Used in the Footer to highlight when links are hovered over.
 
-All input elements that have the required attribute are working as they should.
-The email address input element requires an @ for it to be valid.
-An error message appears if the inputs fields are not filled out appropriately.
-The page refreshes when the form has been filled out correctly and the submit button clicked.
-The submit button is clickable. Once I have aquired the skills to do so, I will create a modal or feedback of some sort that lets the user know that their message has been successfully sent.
-Social Media Links
+- Google Fonts - Imported via CSS.
 
-All icons are clickable and take the user directly to the homepage of the specified social media platform. These will be linked up to the clients' own business social media accounts once the website is made to be genuine and accessible for the client.
-All href links have been entered correctly.
-Links open a new tab successfully.
-As well as Google Chrome and Safari, I have also tested the site on Firefox and Microsoft Edge. No issues or errors were identified and all content responded to different screen sizes as intended.
+- Font Awesome - Icons used for social media links as well.
 
-### Additional Testing
-I used the a11y Contrast Checker to test all colours throughout the project. As you can see there has been one problem detected with the soft green colour I used for my h5 subtitles, the 'Music' text in the logo and the background colour of the contact form. I am happy to leave these colours as they are as I want to create a soft, subtle look to the entire site. By changing this soft, green tone to a more contrasting and vibrant tone, I fear that the intended look will be lost. After further testing on different screens, I can confidently say that the subtitles are easily read-able, and the form is easily seen, and are not at all lost in the background colour.
+- Balsamiq - Used to create wireframes for the project.
 
-Colour Contrast Checker
+### Database Management System
 
-I used the W3C Markup Validation and the W3C CSS Validator to ensure that there were no syntax errors throughout the project.
+- MongoDB Atlas
 
-W3C Markup Results
-W3C CSS Results
-User Story Testing
-User Story Testing
+### Version Control, Storage & Hosting
+
+- Chrome Dev Tools - Heavily used to fix any spacing issues as well as testing responsivity.
+
+- Github - To store repositories and codes after being pushed on Gitpod.
+
+- Git - Used for version control and tracking changes made to files.
+
+- Gitpod - Used for the workspace for this project.
+
+- Heroku - Deployment site.
+
+- Multi Device Mockup Generator (techsini) - To create an image of what the project will look like on various devices. [TechSini.com](http://techsini.com/multi-mockup/index.php)
+
+- WebAIM Contrast Checker - To test colours throughout the site for whether or not they will produce good user experience.
+
+- W3C Markup Validator - 
+
+- W3C CSS Validator - 
+
+- JS Validator - 
+
+## Testing
+
 
 ## Known Bugs and Fixes
-During the process of building my project, I couldn't help but notice a vertical white space down the right side of the page (top to bottom), this was affecting the content and creating spacing and alignment issues.
-
-After doing some research online and speaking with a tutor, this was resolved using the following code:
-
-Credits are included in the CSS comments and in the Credits section of the README file.
-
-Code to fix whitespace
-
-HTML lines 6-12
-
-When using the W3C Markup Validator, I received multipe warnings stating that the comments in my HTML code had more than 2 hyphens "!--------".
-
-This was resolved by removing the hyphens and leaving only 2 before and after the comment.
-An attribute of rel="noopener" was given to all untrusted external links, to improve best practise.
-
-As the footer is fixed to the bottom of the page, this meant that the bottom of the contact page would become hidden by the footer.
-
-This was resolved by creating a spacer div and adjusting the height accordingly with the different screen sizes.
-When creating the media queries I could not understand why the the responsivity was poor and the text was overlapping each other quite quickly when using Chrome Dev Tools to test.
-
-After speaking about this with my mentor, Felipe Souza Alarcon, he recommended that I don't use fixed heights for some of the elements, including the divs that were overlapping. Once I had gone back through the CSS and changed the height and width of certain elements, the problem was resolved.
 
 ## Deployment
 This project was created using Gitpod, which enabled me to stage and commit the files via Git (version control) and pushed into the respository on Github.
