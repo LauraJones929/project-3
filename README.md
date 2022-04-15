@@ -177,6 +177,17 @@ I used Mongo DB Atlas, a non-relational database to store and retrieve all of th
 | Manage Categories | Admin access only. Admin has the ability to create, update or delete diet categories. | [Manage Categories Page](/documentation/images/features/manage-cat.jpg) |
 | Log-Out | Logs user out and clears session | [Log Out](/documentation/images/features/logout.jpg) |
 
+### Security Features
+
+Although certain security features were not required for this project I have chosen to implement basic measures to provide some protection against unauthorised access to other users data.
+
+| Feature | Description | Image URL |
+| ------- | ----------- | --------- |
+| User Log-In | A simple username and password is required for registration. Password gets hashed using Password Hash from the Werkzeug Library. | [Log-In Security](/documentation/images/features/login-security.jpg) |
+| Session Cookie | Upon registering or logging in, a unique session cookie is generated for the duration of the users' session. Recipe uploads are saved in the database against the session cookie username. | [Session Cookie](/documentation/images/features/session.jpg) |
+| Restricted Access | Users cannot edit or delete recipes that are not uploaded by them. Only admin users can manage categories. In the Image URL, you can see that only the username of *laurajones* will be able to edit or delete the recipe. | [Restricted Access](/documentation/images/features/access.jpg) | 
+| Password Confirmation | When registering, a password confirmation input field is displayed to ensure the user signing up is genuine. | [Password Confirmation](/documentation/images/features/password-conf.jpg) |
+
 
 
 ### Features yet to implement
