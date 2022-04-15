@@ -53,7 +53,7 @@ The text throughout the site is either white against the blue-grey background, o
 
 ### Typography
 
-Fonts are imported into the CSS file via Google Fonts.
+Fonts are imported into the CSS file via [Google Fonts.](https://fonts.google.com/)
 
 To keep up with the clean and neutral look of the site, I chose to use just one font that is easy and simple to read.
 I have chosen to use the font family of 'Montserrat', with a fallback font of 'san-serif', in the event of the preferred font failing to import. This font will hopefully create a positive user experience when first entering the site as it exudes a professional yet simplistic mood.
@@ -62,7 +62,9 @@ I have chosen to use the font family of 'Montserrat', with a fallback font of 's
 
 ### Imagery
 
-Photographic imagery is used in some parts of the site. The landing page consists of a header, background image and a footer. The image has been slightly darkened and the opacity reduced so that it wasn't too vibrant against the subtle colours of the header and footer.
+Photographic imagery is used in some parts of the site, all images are sourced from [Pixabay.](https://pixabay.com/photos/search/)
+
+The landing page consists of a header, background image and a footer. The image has been slightly darkened and the opacity reduced so that it wasn't too vibrant against the subtle colours of the header and footer.
 
 This image gives the user a good idea of what the site is about upon entering. The appealing image of fresh food should give the user motivation to explore the site further.
 
@@ -144,23 +146,38 @@ After clicking the *Edit* button on a specific category card, users can populate
 
 ![Edit Category Page Wireframe](/documentation/images/wireframe-imgs/editcategory.jpg)
 
+## Database schema
+
+I used Mongo DB Atlas, a non-relational database to store and retrieve all of the user input data, illustrated below:
+
+![Database](/documentation/images/features/data.jpg)
+
+- The *Users* collection stores user data, including a usernsame and password that they will input each time they are required to log in. The username is used to populate the *created by* field in the *Recipes* collection when a user uploads a new recipe.
+
+- The *Recipes* collection is the largest in the database and stores all user input regarding each recipe, as well as data retrieved from other collections. I included all elements of a recipe that I thought were most relevant for each field.
+
+- The *Categories* collection consists of user input regarding the diet type of that recipe. Which is then injected into the *Recipes* collection as the *diet_name*.
+
 ## Features
 ### Existing Features
-Logo - located in the top-left of the header, the logo acts as a link to the landing page. As the header is fixed and visible at all times, the user can use either the logo or the nav menu to go back to the home section (top of the page)
-Logo
+| Feature | Description | Image URL |
+| ------- | ----------- | --------- |
+| Landing | Landing page to convey the purpose of the website to new and returning users. | |
+| Header | Logo and nav bar allow user to navigate through the site with ease. Burger icon displays on smaller devices. | [Header](/documentation/images/features/header.jpg) |
+| Footer | Sign up option and social media icons direct the user to the company's social media platforms. | [Footer](/documentation/images/features/footer.jpg) |
+| Register | Provides the opportunity for new users to sign-up quickly and efficiently. | [Registration Page](/documentation/images/features/register.jpg) |
+| Log-In | Provides the opportunity for returning users to log-in quickly. | [Log-In Page](/documentation/images/features/log-in.jpg) |
+| Profile Page | Users are directed to a welcome message displaying their username. | [Profile Page](/documentation/images/features/profile.jpg) |
+| Recipes | Page where all users' recipes are displayed. | [Recipes Page](/documentation/images/features/recipes.jpg) |
+| Recipe Search | Users can text search for a recipe using the recipe name or diet category. | [Recipe Search](/documentation/images/features/recipe-search.jpg) |
+| Drop Down Recipes | Recipes are organised with dropdown select elements. Users select/drop the recipe they want to view. | [Dropdown Recipe](/documentation/images/features/dropdown.jpg) |
+| Add Recipe | Users can create and upload a recipe to their database. | [Add Recipe](/documentation/images/features/add-recipe.jpg) |
+| Edit Recipe | Enables users to modify all of the fields for any of the recipes they uploaded. Original data is uploaded from the database into the value fields until the user modifies. | [Edit Recipe](/documentation/images/features/edit-recipe.jpg) |
+| Delete Recipe | Allows user to delete a recipe that they have uploaded. | [Delete Recipe](/documentation/images/features/delete.jpg) |
+| Manage Categories | Admin access only. Admin has the ability to create, update or delete diet categories. | [Manage Categories Page](/documentation/images/features/manage-cat.jpg) |
+| Log-Out | Logs user out and clears session | [Log Out](/documentation/images/features/logout.jpg) |
 
-Navigation bar - Sticks to the right side of the header which is fixed to the top of the page at all times. As this is a one page website, this will make it easier for users rather than having to scroll between in section. Hover effect creates a bottom border with a green colour to match the green colour that is often used throughout the page.
-Navbar
 
-Landing Page - On first entering the site, users will be drawn to hero image of the singer. This image uses warm colours and has a 'friendly' feel to it that invites the users in. From here they can easily navigate the site via the navigation menu or by scrolling.
-Images - Large background images (photographs) will draw the users' attention as they are brightly coloured and bold against the subtleness of the webpage. The images bring a "fun-ness" to the site, creating a positive emotional response.
-Text - Paragraphs throughout the site provides the user with some basic information about Jess, including her achievements and what she has to offer.
-Contact icon - An envelope icon is centered half way down the page, below the events services section, so that users can click this icon and be directly taken to the contact form.
-Videos - YouTube videos that Jess has recorded in her home studio are embedded via iframes, so the user can see what sounds and styles Jess brings to the table.
-Contact form - A static contact form is in place, currently sourced by HTML and CSS only. Any message submitted currently will be posted to the Code Institute form dump. After aquiring the skills to enable to me to make this an active form, users will be able to contact Jess via email with any enquiries that they may have.
-Contact form and Footer
-
-Footer - The footer is fixed so that social media links are visible and accessible at all times. Links are opened in a new tab. Currently the links will only take you to the social platforms home page, eventually I would like to link these up with the clients' social media accounts.
 
 ### Features yet to implement
 The logo is currently made using HTML text and CSS styling. I would like to aquire the skills to design and create a logo so that it could be embedded as an image.
