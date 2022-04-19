@@ -23,33 +23,31 @@
                 <a href="{{ url_for('index') }}" class="brand-logo" id="my-cookbook">My Cookbook</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right font-style">
                     <i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down" aria-labelledby="home-link my-recipes-link
-                    add-recipe-link categories-link logout-link login-link register-link">
+                <ul class="right hide-on-med-and-down">
                     {% if session.user %}
                         <li>
-                            <a href="{{ url_for('get_recipes', username=session['user']) }}"
-                            class="my-recipes-link">My Recipes</a>
+                            <a href="{{ url_for('get_recipes', username=session['user']) }}">My Recipes</a>
                         </li>
                         <li>
-                            <a href="{{ url_for('add_recipe') }}" class="add-recipe-link">Add A Recipe</a>
+                            <a href="{{ url_for('add_recipe') }}">Add A Recipe</a>
                         </li>
                         {% if session.user == "admin123" %}
                             <li>
-                                <a href="{{ url_for('get_categories') }}" class="categories-link">Manage Categories</a>
+                                <a href="{{ url_for('get_categories') }}">Manage Categories</a>
                             </li>
                         {% endif %}
                         <li>
-                            <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+                            <a href="{{ url_for('logout') }}">Logout</a>
                         </li>
                     {% else %}
                         <li>
-                            <a href="{{ url_for('index') }}" class="home-link">Home</a>
+                            <a href="{{ url_for('index') }}">Home</a>
                         </li>
                         <li>
-                            <a href="{{ url_for('login') }}" class="login-link">Login</a>
+                            <a href="{{ url_for('login') }}">Login</a>
                         </li>
                         <li>
-                            <a href="{{ url_for('register') }}" class="register-link">Register</a>
+                            <a href="{{ url_for('register') }}">Register</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -57,33 +55,33 @@
         </nav>
         
         <!-- mobile nav -->
-        <ul class="sidenav" id="mobile-demo" aria-labelledby="home-link my-recipes-link
-            add-recipe-link logout-link login-link register-link">
+        <ul class="sidenav" id="mobile-demo">
             <li>
-                <a href="{{ url_for('index') }}" class="home-link">Home</a>
+                <a href="{{ url_for('index') }}">Home</a>
             </li>
             {% if session.user %}
                 <li>
-                    <a href="{{ url_for('get_recipes', username=session['user']) }}"
-                    class="my-recipes-link">My Recipes</a>
+                    <a href="{{ url_for('get_recipes', username=session['user']) }}">
+                        My Recipes
+                    </a>
                 </li>
                 <li>
-                    <a href="{{ url_for('add_recipe') }}" class="add-recipe-link">Add A Recipe</a>
+                    <a href="{{ url_for('add_recipe') }}"">Add A Recipe</a>
                 </li>
                 {% if session.user == "admin123" %}
                     <li>
-                        <a href="{{ url_for('get_categories') }}" class="categories-link">Manage Categories</a>
+                        <a href="{{ url_for('get_categories') }}">Manage Categories</a>
                     </li>
                 {% endif %}
                 <li>
-                    <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
                 </li>
             {% else %}
                 <li>
-                    <a href="{{ url_for('login') }}" class="login-link">Login</a>
+                    <a href="{{ url_for('login') }}">Login</a>
                 </li>
                 <li>
-                    <a href="{{ url_for('register') }}" class="register-link">Register</a>
+                    <a href="{{ url_for('register') }}">Register</a>
                 </li>
             {% endif %}
         </ul>            
