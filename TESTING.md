@@ -62,7 +62,7 @@ Most testing was carried out via Google Chrome browser and Chrome Dev Tools for 
 
 *The edit and delete button does not show.*
 
-## Functionality Testing
+## Functionality Testing (Manual)
 
 The following tables show the functionality testing performed on the web-app to ensure it works as desired. I have tested on a Windows device on the listed browsers.
 
@@ -209,10 +209,70 @@ The following tables show the appearance testing to check for any differences ac
 
 Online tools have been used to validate the HTML, CSS, Python and JavaScript files to ensure they are free from errors, and comply with the latest standards. The results for these tests are shown below.
 
-| Test | Process | Result | Image URL |
-| ---- | ------------- | ---- | ------- |
-| HTML Validation | Copy page URI into W3C validator
-| CSS Validation |
-| Python Validation |
-| Python Beautifier |
-| JavaScript Validation | |
+| Test | Process | Result | Image URL | Comment |
+| ---- | ------- | ------ | --------- | ------- |
+| HTML Validation | Copy page URI into W3C validator | 1 Warning - Section lacks headers | [HTML W3C Validator Results](/documentation/images/testing/htmlvalid.jpg) | The page has a heading. This is not a conventional website page layout of multiple headed sections |
+| CSS Validation | Copy page URI into W3C validator | 7 Warnings - Related to Materialize CSS | [CSS W3C Validator Results](/documentation/images/testing/cssvalid.jpg) | The errors that have shown are related to the Materialize CSS that I have used. Layout or functionality of the app is not affected |
+| Python Validation | Copy Python code into PEP8 validator |  | [Pep8 Validator Results](/documentation/images/testing/pep8.jpg)
+| JavaScript Validation | Copy JavaScript code into JShint | Warnings | [JShint Validator Results](/documentation/images/testing/jshint.jpg) | Warning related to Materialize CSS code and ES6 versions. Web app not affected |
+
+## Responsivity Testing
+
+I have carried out continuous responsiveness testing, throughout building the project, to ensure the website functions on different devices and in both portrait and landscape orientation, using Google Devtools. The website was built and tested on a Windows 11 Lenovo Laptop. Other devices that the website has been tested on:
+
+- Attached Dell monitor
+- iPhone 12
+
+![Mobile Responsivity](/documentation/images/testing/responsive1.jpg)
+
+![Tablet Responsivity](/documentation/images/testing/responsive2.jpg)
+
+![Mobile Responsivity](/documentation/images/testing/responsive3.jpg)
+
+## Performance Testing
+
+Further testing using the following tools:
+
+- Google Lighthouse (Desktop)
+
+![Performance Testing](/documentation/images/testing/performance.jpg)
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+| ---- | ----------- | ------------- | -------------- | --- |
+| Landing Page | 89% | 94% | 83% | 89% |
+| Registration Page | 100% | 93% | 83% | 89% |
+| Log-In Page | 100% | 93% | 83% | 89% |
+| Profile Page | 100% | 90% | 83% | 89% |
+| My Recipes Page | 95% | 85% | 83% | 80% |
+| Add a Recipe Page | 100% | 84% | 83% | 89% |
+| Edit Recipe Page | 100% | 84% | 83% | 89% |
+| Manage Categories Page | 96% | 80% | 83% | 80% |
+| Add a Category Page | 100% | 93% | 83% | 89% |
+| Edit Category Page | 100% | 93% | 83% | 89% |
+
+- Google Lighthouse (Mobile)
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+| ---- | ----------- | ------------- | -------------- | --- |
+| Landing Page | 73% | 90% | 83% | 91% |
+| Registration Page | 97% | 93% | 83% | 91% |
+| Log-In Page | 98% | 93% | 83% | 91% |
+| Profile Page | 97% | 90% | 83% | 91% |
+| My Recipes Page | 78% | 85% | 83% | 83% |
+| Add a Recipe Page | 96% | 84% | 83% | 89% |
+| Edit Recipe Page | 96% | 84% | 83% | 89% |
+| Manage Categories Page | 73% | 80% | 80% | 83% |
+| Add a Category Page | 97% | 93% | 83% | 91% |
+| Edit Category Page | 96% | 93% | 83% | 91% |
+
+## Security Testing
+
+Testing security measures that are in place to improve user experience and confidentiality.
+
+| Test | Element | Desired Result | Actual Result | Google Chrome v 100.0.4896.88 | Edge v 100.0.1185.44 | Firefox v 99.0.1 (64-bit) |
+| ---- | ------- | -------------- | ------------- | ---------- | --------------- | ---------- |
+| 060 | Username Duplication | No username duplication allowed | Registration will check for username duplication. A flash message will warn the user if the username already exists | PASS | PASS | PASS |
+| 061 | Password security | Password is hashed | The password is converted into a complicated string or an algorithm | PASS | PASS | PASS |
+| 062 | Password confirmation | Checks for password match | When the password confirmation input matches the first password input, feedback validation is given and the user can register successfully | PASS | PASS | PASS |
+| 063 | Restricted access | Users are only able to edit or delete their own recipe | The *edit* and *delete* buttons are only visible to the user who created the recipe | PASS | PASS | PASS |
+| 064 | Admin access | Only the admin user can edit or delete categories | The *Manage Categories* link in the navbar is only visible to admin users | PASS | PASS | PASS |

@@ -17,7 +17,7 @@ const check = function() {
         document.getElementById('message').style.color = 'red';
         document.getElementById('message').innerHTML = '<i class="fas fa-times"></i>';
     }
-}
+};
 
 // Initialises the Select element and shows options
 // From Materialize
