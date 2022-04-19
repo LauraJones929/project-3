@@ -195,11 +195,13 @@ Although certain security features were not required for this project I have cho
 
 ### Features yet to implement
 
-hide recipes(dropdown)
-limit recipes befroe a next button shows
-household recipes
-profile management
-are you sure you want to delete?
+| Feature | Description |
+| ------- | ----------- |
+| Dropdown for all Recipes | At the moment, all recipe names are visible under their category, ready to be selected and dropped down for full visibility. For better organisation, I would like to hide all recipes until the user clicks a drop down button (on the chosen category card) that will reveal all recipes under that category. |
+| Next/Previous button | Incase the *My Recipes* page becomes too crowded once a user has uploaded a lot of recipes, I would like to set a limited amount of recipes that are shown below the category cards, and when that number of recipes is exceeded there is a *next* button that allows the user to skip to the next lot of recipes. |
+| Family accounts | Once I have built up the knowledge required to be able to take the web app further, I would like to provide the opportunity to hold family/household accounts where users of the same family can log into the same account but have their own individual profile that only they can manage. |
+| Profile Management | I would like to add a management system for users to be able edit their profiles and populate elements such as, usernames, profile picture, favourite recipe/food. |
+| Delete confirmation | On developing the website further I would like to add a modal that appears when a user attempts to delete a recipe or category. The modal will ask the user if they are sure that they want to delete, to prevent any accidental deletions.
 
 ## Technologies Used
 ### Languages
@@ -245,40 +247,65 @@ are you sure you want to delete?
 
 - WebAIM Contrast Checker - To test colours throughout the site for whether or not they will produce good user experience.
 
-- W3C Markup Validator - 
+- W3C Markup Validator - Checks HTML code for errors and warnings.
 
-- W3C CSS Validator - 
+- W3C CSS Validator - Checks CSS code for errors and warnings.
 
-- JS Validator - 
+- JShint - Checks JavaScript code for errors and warnings.
+
+- PEP8 Validator - Checks that the Python code is PEP8 compliant.
 
 ## Testing
 
 All testing for this project can be found in the [TESTING.md file](TESTING.md).
 
-## Known Bugs and Fixes
+## Creating the Database
+
+The key features required for this app to function as designed are centred around CRUD interactions with a MongoDB Atlas cloud database management system:
+
+- Create or upload a recipe into the database which can then be viewed by all other registered users.
+- Read or view all of the recipes stored in the database.
+- The list of recipes can be searched by recipe name or category name.
+- Update any of their own recipes, to change any of the previously stored content, or add additional information.
+- Delete recipes they themselves have uploaded. This provides restricted access.
+
+This app is connected to a MongoDB Atlas Cluster. The following steps were used to create the MongoDB Project Database:
+
+1. Register/log-in to MongoDB Atlas.
+2. Create a new project.
+3. Click 'Build a Database'.
+4. Locate the free, 'Shared' database and click 'Create'.
+5. Ensure that you have the 'AWS' Cloud Provider selected, and that you have selected the region closest to you. Ensure that the Cluster Tier is of M0 Sandbox, then click 'Create Cluster'. *See below*.
+
+![Create Database](/documentation/images/testing/createdb.jpg)
+
+6. Create your username and password and ensure that 'My Local Environment' is selected for the network connection.
+7. Add IP Address and allow Access from Anywhere (Not recommended for full production apps).
+8. Once the database is active, you can connect it to Git or whatever version control you are working from.
+9. Click Collections to add a database and start adding documents to your database collections by providing a database name and adding a name for your first collection of documents.
 
 ## Deployment
-This project was created using Gitpod, which enabled me to stage and commit the files via Git (version control) and pushed into the respository on Github.
 
-To deploy the project on Github:
-Select the repository you wish to deploy.
-Click the Settings tab within that repository.
-In the Settings, scroll down and select Pages.
-In the Source section, click Branch and select the main option, click Save.
-The URL for the deployed project is now saved in Pages.
-Forking the Github Repository:
-Choose to fork the repository by making a copy. You can then make changes to the copy without it affecting the original repository.
+This project was created using Gitpod, which enabled me to stage and commit the files via Git (version control). ll of the files necessary to run this website have been stored in a GitHub repository.
 
-Select the repository you wish to fork.
-In the top right corner of the page (under your account icon) there will be an option to Fork.
-By selecting Fork you will now have a copy of the respository in your own Github account.
-Cloning the Github Repository:
-Select the repository you wish to clone locally.
-Above the files, locate the Code dropdown menu.
-Select and copy the link appropriately (HTTPS, SSH, Github CLI).
-Open the terminal and change the directory to where you want the cloned version to be located.
-Type git clone and paste the copied link.
-Press Enter to create local clone.
+### Forking the GitHub repository
+
+1. Select the repository you wish to fork.
+2. In the top right corner of the page (under your account icon) there will be an option to Fork.
+3. By selecting Fork you will now have a copy of the respository in your own Github account.
+
+### Cloning the Github Repository:
+
+1. Select the repository you wish to clone locally.
+2. Above the files, locate the Code dropdown menu.
+3. Select and copy the link appropriately (HTTPS, SSH, Github CLI).
+4. Open the terminal and change the directory to where you want the cloned version to be located.
+5. Type git clone and paste the copied link.
+6. Press Enter to create local clone.
+
+### Creating the Heroku App
+
+
 
 ## Credits
 Code
