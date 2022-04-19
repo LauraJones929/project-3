@@ -22,22 +22,25 @@ The application is designed to be responsive to all screen sizes and accessible 
 ### User Stories
 **First Time Visitor Goals**
 
-- As a first time visitor, I want to understand what the site's purpose is so that I know whether or not if I want to explore further.
+1. As a first time visitor, I want to understand what the site's purpose is so that I know whether or not I want to explore further.
 
-- As a first time visitor, I want to be able to easily register so I can access the rest of the site.
+2. As a first time visitor, I want to be able to easily register so I can access the rest of the site.
 
 **Returning Visitor Goals**
-- As a returning user, I want to upload my favourite recipes and store them so they are easily accessible for another time.
 
-- As a returning user, I want to manage my recipes by creating, updating and deleting them when necessary.
+3. As a returning user, I want to upload my favourite recipes and store them so they are easily accessible for another time.
+
+4. As a returning user, I want to manage my recipes by creating, updating and deleting them when necessary.
 
 **Frequent Visitor Goals**
-- As a frequent user, I want to be able to follow the company's social media platforms so that I can follow them and share my own recipes with them.
 
-- As a frequent user, I want to be able to store a large variety of recipes in separate categories, in an organised manner, that are easy to locate when I need them.
+5. As a frequent user, I want to be able to follow the company's social media platforms so that I can follow them and share my own recipes with them.
+
+6. As a frequent user, I want to be able to store a large variety of recipes in separate categories, in an organised manner, that are easy to locate when I need them.
 
 **Site Owner Goals**
-- As a site owner, I need to enforce some basic access control when a user is editing or deleting data in order to prevent unauthorised editing or deletion of user uploaded data.
+
+7. As a site owner, I need to enforce some basic access control when a user is editing or deleting data in order to prevent unauthorised editing or deletion of user uploaded data.
 
 ## Design
 ### Colour Scheme
@@ -192,6 +195,9 @@ Although certain security features were not required for this project I have cho
 
 ### Features yet to implement
 
+hide recipes(dropdown)
+limit recipes befroe a next button shows
+household recipes
 
 ## Technologies Used
 ### Languages
