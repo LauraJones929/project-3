@@ -64,7 +64,7 @@ Most testing was carried out via Google Chrome browser and Chrome Dev Tools for 
 
 ## Functionality Testing
 
-The following tables show the functionalality testing performed on the web-app to ensure it works as desired. I have tested on a Windows device on the listed browsers.
+The following tables show the functionality testing performed on the web-app to ensure it works as desired. I have tested on a Windows device on the listed browsers.
 
 ### Navigation Testing
 
@@ -179,5 +179,40 @@ Testing for successful deletion of the recipe from the web-app and from the data
 
 | Test | Element | Desired Result | Actual Result | Google Chrome v 100.0.4896.88 | Edge v 100.0.1185.44 | Firefox v 99.0.1 (64-bit) |
 | ---- | ------- | -------------- | ------------- | ---------- | --------------- | ---------- |
-| 051 | Delete button | Recipe is deleted from database | User can successfully delete recipe from the app and database | PASS | PASS | PASS |
-| 052 | Restricted Access | Users can only delete their own recipe | Delete button displays only for the user that it was created by | PASS | PASS | PASS |
+| 057 | Delete button | Recipe is deleted from database | User can successfully delete recipe from the app and database | PASS | PASS | PASS |
+| 058 | Restricted Access | Users can only delete their own recipe | Delete button displays only for the user that it was created by | PASS | PASS | PASS |
+
+### Other Links
+
+| Test | Element | Desired Result | Actual Result | Google Chrome v 100.0.4896.88 | Edge v 100.0.1185.44 | Firefox v 99.0.1 (64-bit) |
+| ---- | ------- | -------------- | ------------- | ---------- | --------------- | ---------- |
+| 059 | Social Media Links | Social Media icons to perform as a link that directs user to the company's social media platforms | User is directed to the social media platform when relevant icon is clicked | PASS | PASS | PASS |
+
+## Appearance Testing
+
+The following tables show the appearance testing to check for any differences across different web browsers. This web app was developed on a Google Chrome browser, on a Windows Laptop. The app has also been regularly tested on Firefox and Microsoft Edge.
+
+| Page | Google Chrome | Edge | Firefox |
+| ---- | ------------- | ---- | ------- |
+| Landing Page | No visible difference | No visible difference | h1 heading is less bold |
+| Registration Page | No visible difference | No visible difference | No visible difference |
+| Log-In Page | No visible difference | No visible difference | No visible difference |
+| Profile Page | No visible difference | No visible difference | No visible difference |
+| My Recipes Page | No visible difference | No visible difference | Placeholder text is lighter than other browsers. Recipes text is bolder
+| Add a Recipe Page | No visible difference | No visible difference | No visible difference |
+| Edit Recipe Page | No visible difference | No visible difference | Input text appears to be darker/bolder but less sharp
+| Manage Categories Page | No visible difference | No visible difference | No visible difference |
+| Edit Category Page | No visible difference | No visible difference | No visible difference |
+| Add Category Page | No visible difference | No visible difference | No visible difference |
+
+## Code Quality and Validation
+
+Online tools have been used to validate the HTML, CSS, Python and JavaScript files to ensure they are free from errors, and comply with the latest standards. The results for these tests are shown below.
+
+| Test | Process | Result | Image URL |
+| ---- | ------------- | ---- | ------- |
+| HTML Validation | Copy page URI into W3C validator
+| CSS Validation |
+| Python Validation |
+| Python Beautifier |
+| JavaScript Validation | |
