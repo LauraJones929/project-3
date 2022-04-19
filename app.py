@@ -73,13 +73,13 @@ def login():
 
         if user_exists:
             # checks user input matches hashed password
-            if check_password_hash(
-                user_exists["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Hello, {}! You have successfully logged in!".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+            if check_password_hash(user_exists["password"],
+                                    request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Hello, {}! You have successfully logged in!".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash(
@@ -166,7 +166,7 @@ def edit_recipe(recipe_id):
     diets = mongo.db.categories.find().sort("diet_name", 1)
     skills = mongo.db.recipes.find().sort("skill_level", 1)
     return render_template("edit_recipe.html", recipe=recipe,
-        diets=diets, skills=skills)
+                            diets=diets, skills=skills)
 
 
 # allows users to delete a recipe
