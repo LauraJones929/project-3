@@ -276,3 +276,17 @@ Testing security measures that are in place to improve user experience and confi
 | 062 | Password confirmation | Checks for password match | When the password confirmation input matches the first password input, feedback validation is given and the user can register successfully | PASS | PASS | PASS |
 | 063 | Restricted access | Users are only able to edit or delete their own recipe | The *edit* and *delete* buttons are only visible to the user who created the recipe | PASS | PASS | PASS |
 | 064 | Admin access | Only the admin user can edit or delete categories | The *Manage Categories* link in the navbar is only visible to admin users | PASS | PASS | PASS |
+
+## Additional Testing
+
+I used the a11y Contrast Checker to test all colours throughout the project. As you can see there has been some problems detected regarding the grey/white contrast that runs throughout the website, as well as the pink/white that I used for the *Reset/Cancel* buttons. I am happy to leave these colours as they are as I want to create a soft, subtle look to the entire site. By changing this soft tone to something more contrasting and vibrant, I fear that the intended look will be lost. After further testing on different screens, I can confidently say that the grey text is easily read-able, and the buttons are highly visible, and are not at all lost in the  white background.
+
+![Colour Contrast Checker](/documentation/images/testing/colour-contrast.jpg)
+
+# Known Bugs & Fixes
+
+| Issue # | Bug | Description | Solution |
+| ------- | --- | ----------- | -------- |
+| 1 | White-space in text areas | When clicking on the text area for the *Ingredients* and *Method* I noticed there was some white space, which affected the validation feedback when filling in the form. | I remembered seeing this on the Code Institute tutorials as this was an issue that came up during a walkthrough project. I was able to follow this advice and get rid of the whitespace by using the closing tag `</textarea>` on the same line of the last line of text.
+
+[Back to README.md file](README.md)
