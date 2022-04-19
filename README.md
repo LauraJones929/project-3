@@ -198,6 +198,8 @@ Although certain security features were not required for this project I have cho
 hide recipes(dropdown)
 limit recipes befroe a next button shows
 household recipes
+profile management
+are you sure you want to delete?
 
 ## Technologies Used
 ### Languages
@@ -251,6 +253,7 @@ household recipes
 
 ## Testing
 
+All testing for this project can be found in the [TESTING.md file](TESTING.md).
 
 ## Known Bugs and Fixes
 

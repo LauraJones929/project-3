@@ -160,10 +160,24 @@ Testing the ability to retrieve a previously uploaded recipe from the database a
 | 049 | Data Written to MongoDB | Confirm recipe data is edited and written to MongoDB | Edited recipes appear in the Recipes collection within Mongo DB. All fields are populated if completed | PASS | PASS | PASS |
 | 050 | My Recipes updated | Edited recipe successfully renders on My Recipes page | The edited recipe renders as intended on the My Recipes page | PASS | PASS | PASS |
 
+### Manage Categories
+
+Testing the ability to create, edit and delete the diet categories from the database.
+
+| Test | Element | Desired Result | Actual Result | Google Chrome v 100.0.4896.88 | Edge v 100.0.1185.44 | Firefox v 99.0.1 (64-bit) |
+| ---- | ------- | -------------- | ------------- | ---------- | --------------- | ---------- |
+| 051 | Navbar link (restricted access) | Directs user (admin) to Manage Categories page | User (admin) is successfully directed to the Manage Categories page | PASS | PASS | PASS |
+| 052 | Admin-only access | Manage Categories page is only accessible by the admin | Username 'admin123' can access the Manage Categories page. Other usernames cannot. | PASS | PASS | PASS |
+| 053 | Categories displayed | Existing diet categories within the database are displayed in card elements | User (admin) is able to view the category cards, with the options to edit or delete | PASS | PASS | PASS |
+| 054 | Edit Button | Directs admin to Edit Category page where the name of the category can be changed | Admin is successfully directed to the Edit Category page and is able to edit the name of the category. Category name is successfully updated in the database | PASS | PASS | PASS |
+| 055 | Delete Button | Deletes category | User can successfully delete a category from the web app and the database | PASS | PASS | PASS |
+| 056 | Add a Category | Creates a new category | Admin is able to create a new category that will be visible to all users | PASS | PASS | PASS |
+
 ### Delete Recipe (DELETE)
 
 Testing for successful deletion of the recipe from the web-app and from the database.
 
 | Test | Element | Desired Result | Actual Result | Google Chrome v 100.0.4896.88 | Edge v 100.0.1185.44 | Firefox v 99.0.1 (64-bit) |
 | ---- | ------- | -------------- | ------------- | ---------- | --------------- | ---------- |
-| 051 | Edit button | Direct user to Edit Recipe Page | Edit Recipe page is loaded | PASS | PASS | PASS |
+| 051 | Delete button | Recipe is deleted from database | User can successfully delete recipe from the app and database | PASS | PASS | PASS |
+| 052 | Restricted Access | Users can only delete their own recipe | Delete button displays only for the user that it was created by | PASS | PASS | PASS |
