@@ -360,36 +360,36 @@ You can find the above Mongo_URI value in the appropriate Mongo DB Project under
 3. After linking your app to your workspace with one of the above steps, you can then deploy new versions of the app by running the command `git push heroku main` and the app will be deployed to Heroku.
 
 ## Credits
-Code
-Stackoverflow Forums
 
-As stated in the comments of the CSS file (lines 4-5), for providing a solution to fix an issue regarding white space down the right side of the page.
-Brian, Program Director, Code Institute
+The content of this website was created by Laura Jones. Snippets of code have been copied from official documentation and other sources credited below. All pre-loaded recipes were taken from various Cookbooks and online recipe sites, which are also credited below.
 
-For giving me the idea to have the navbar on the right side of the header (custom CCS used).
-Matt Rudge, Code Institute
+### Code
 
-For providing me the idea to use a hover effect on icons. I used this effect on the contact icon and social media icons (custom CSS styling was used).
-The idea for the style and layout for the contact form was inspired by the Love Running Project. Again, I used custom CSS styling.
-Maggie Walsh (fellow Stack member)
+Much of the structure of this site follows what was taught during the Backend Development - Task Manager walkthrough project provided by Code Institute, but has been modified to suit a recipe database site.
 
-For sharing advice with members regarding the basic structure of a README.md file.
-Media
-Jess Hynes (client)
-Providing the photographic images to use as hero images.
-Providing permission to use YouTube links to videos that she has recorded and uploaded from her home studio.
-Acknowledgements
-Code Institue Tutors
+| Code Snippet | Description | Source |
+| ------------- | ----------- | ------ |
+| Navbar |  Navbar element sits on the right with a responsive burger icon on smaller devices | [Materalizecss.com](https://materializecss.com/navbar.html) |
+| Footer | Footer content is spaced evenly using rows and columns, consisting of a *Sign-Up* section and social media links | [Materalizecss.com](https://materializecss.com/footer.html) |
+| Forms | Rows and colums are used to make the forms look organised and evenly spaced (Register, Log-In, Add/Edit Recipe and Add/Edit Categories) | [Materlizecss.com](https://materializecss.com/text-inputs.html) |
+| Cards | Cards are used in the Profile page (welcomes user), the Recipes page (each card stands for a different diet category and holds the relevant recipes), the Search bar and in the Manage Categories page | [Materializecss.com](https://materializecss.com/cards.html) |
+| Collapsible Recipes | Recipes drop down when they are clicked to keep the page looking organised | [Materializecss.com](https://materializecss.com/collapsible.html) |
+| Buttons | Buttons used throughout the site | [Materliazecss.com](https://materializecss.com/buttons.html) |
+| Python functions | The backend functionality structure was taught via the Code Institute Task Manager Project | [CI Task Manager Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) |
+| Form Validation for Dropdown Input Box | Ensures form validation on the dropdown input field when using Materliaze | [CI Task Manager Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/6449dcd23ca14016aa83dc7313d91a02/?child=first) |
 
-For showing me guidance when using the display attribute to align content in rows and columns, so that it is spaced evenly across the page.
-Felipe Souza Alarcon, my Code Institute mentor throughout the course
+| Imagery | Description | Source |
+| ------------- | ----------- | ------ |
+| Landing Page | Background Image | [Pixabay](https://pixabay.com/) |
+| Recipes Page | Card Images | [Pixabay](https://pixabay.com/) |
+| Manage Categories | Card Images | [Pixabay](https://pixabay.com/) |
 
-For continous support and professional guidance during the process of building my project.
-Fellow Slack Community members
+## Acknowledgements
 
-For responding when in times of need.
+- Code Institute - for the video tutorials and providing the knowledge for Python, Flask and some of the different databases structures.
 
-## Personal Development
-Following a session with my Code Institute mentor, I have noted that for future projects I will pay extra attention to how I am writing up CSS code, so that I don't end up with repetitive, unnecessary lines of code. In the meantime I am going to research different methods and ways of creating effective code that does not use a large amount of lines within the CSS file.
+- Code Institute Tutors - Providing advice on how to run a loop more than once on the same page.
 
-After writing my Personal Development section I decided to go back into my CSS file and attempt to slim down on the amount of code being used. I was able to remove approx. 200 lines of code by testing with Chrome Dev Tools and removing any unnecessary or repetitive code.
+- Code Institute Mentor, Spencer Barriball - for the fantastic, professional advice on what makes a good web developer.
+
+- Fellow Slack Members - for providing outstanding advice in times of need.
