@@ -2,26 +2,14 @@
 
 /*-- 404 Page Styling --*/
 
-#page404 {
-    font-family: 'Dongle', 'sans-serif';
-    background-image: none;
-}
-
-#box404 {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 35px;
-}
-.header-404 {
-    font-family: 'Dongle', cursive;
-    font-size: 70px;
-}
-
-.content-404 {
+.error {
     text-align: center;
+    max-width: 840px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* -- Various styling -- */
