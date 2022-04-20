@@ -96,7 +96,7 @@ def login():
         if user_exists:
             # Checks user input matches hashed password
             if check_password_hash(user_exists["password"],
-                                    request.form.get("password")):
+                                   request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Hello, {}! You have successfully logged in!".format(
                     request.form.get("username")))
@@ -198,8 +198,8 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     diets = mongo.db.categories.find().sort("diet_name", 1)
     skills = mongo.db.recipes.find().sort("skill_level", 1)
-    return render_template("edit_recipe.html", recipe=recipe,
-                            diets=diets, skills=skills)
+    return render_template("edit_recipe.html", recipe=recipe, diets=diets,
+                           skills=skills)
 
 
 @app.route("/delete_recipe/<recipe_id>")
