@@ -31,6 +31,7 @@ def index():
     # defining function
 @app.errorhandler(404)
 def not_found(e):
+    print("I'm in 404")
     return render_template("404.html")
 
 
