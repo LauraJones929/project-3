@@ -18,6 +18,8 @@ The application is designed to be responsive to all screen sizes and accessible 
 
 ## Homepage Mockup
 
+![Mock Up Imagery](/static/images/mockup.jpg)
+
 ## User Experience (UX)
 ### User Stories
 **First Time Visitor Goals**
@@ -76,6 +78,10 @@ The Recipes page that contains all of the users' recipes consists of 4 diet spec
 The Manage Categories page consists of 4 images for each category, these images are the same for each category for ease which I may change at a later date.
 
 ![Various Imagery](/documentation/images/features/imagery.jpg)
+
+***Since writing up the Imagery documentation, I decided to change the background image used on the Landing Page. This was purely down to personal preference and I do think the darker image works better against the white text. See new Landing Page below.***
+
+![New Landing Page Imagery](/static/images/newlanding.jpg)
 
 ## Wireframes
 Wireframes for the original design concepts across all devices were created using [Balsamiq.](https://balsamiq.com/wireframes/)
@@ -305,7 +311,53 @@ This project was created using Gitpod, which enabled me to stage and commit the 
 
 ### Creating the Heroku App
 
+As this is a full-stack website it has been deployed to Heroku.com using the following procedure:
 
+1. Register/log-in to Heroku.
+2. From the Dashboard, select the "New" button on the top-Right of the screen, then select "Create new app".
+3. Choose your app name.
+4. Select your region.
+5. Click "Create App".
+
+### Heroku Deployment
+
+1. In the "Deployment Method" section, select Github. Locate the Connect to GitHub section below.
+2. Your Github profile should be displayed, if not type in your GitHub username.
+3. Select the corresponding repository, and click "Connect".
+
+Configuration settings and secret keys are needed for this app, which Heroku requires in order for the website to function as desired. To do this you need to set the Config Vars within Heroku:
+
+5. Under the "Settings" tab, in the Config Vars section select the "Reveal Config Vars" button.
+6. This will reveal a form for inputting the key and value pairs necessary to connect to the app, as follows:
+
+| KEY | VALUE |
+| --- | ----- |
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET KEY | Randomly Generated Fort Knox Key |
+| MONGO_URI | Your unique MongoDB URI |
+| MONGO_DBNAME | Your unique Mongo DB name |
+
+You can find the above Mongo_URI value in the appropriate Mongo DB Project under Cluster by selecting "Connect".
+
+7. Select "Clusters".
+8. Select "Connect".
+9. Select "Connect your application".
+10. Choose your Driver and Version.
+11. Copy your connection string.
+
+***Remember to substitute in your own DBNAME and Password***
+
+### Enabling Automatic Deployment
+
+1. In Heroku, click the "Deploy" tab.
+2. In the "Automatic deploys" section select the branch you wish to use.
+
+***Since first deploying the application on Heroku, Heroku themselves have encountered a security problem and therefore have had to remove certain functionalities that would allow users to automatically deploy or update. All deployments are now carried out manually using the following procudure:***
+
+1. In the terminal, run the command `heroku login -i` and login when prompted.
+2. Run the following command: `heroku git:remote -a your_app_name_here` and replace `your_app_name_here` with the name of your Heroku app. This will link the app to your Gitpod terminal, and the Heroku app to the Gitpod workspace.
+3. After linking your app to your workspace with one of the above steps, you can then deploy new versions of the app by running the command `git push heroku main` and the app will be deployed to Heroku.
 
 ## Credits
 Code
