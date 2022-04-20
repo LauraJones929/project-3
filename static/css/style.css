@@ -27,10 +27,15 @@
 /* -- Various styling -- */
 
 body {
+    height: 100%;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Montserrat', 'sans-serif';
+}
+
+html {
+    height: 100%;
 }
 
 /* -- Fixes a spacing issue
@@ -53,33 +58,24 @@ main {
 
 /* -- Landing page -- */
 
-.container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
 .landing-page {
     height: 100vh;
     width: 100vw;
-    background: url("../images/landing.jpg") center center;
+    background: url("../images/background.jpg") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    opacity: 0.9;
     filter: brightness(80%);
+    color: white;
+    padding-top: 40vh;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .heading1 {
-    position: absolute;
     font-weight: 600;
-    left: 10%;
-    margin-right: 25px;
-    top: 30%;
-}
-
-.heading2 {
-    position: absolute;
-    bottom: 150px;
-    margin: 0 20px;
+    font-size: 3rem;
 }
 
 /* -- Various titles across the site -- */
@@ -101,6 +97,10 @@ main {
 
 #vegan-title, #meat-title {
     color: black;
+}
+
+.btn, .btn-small, .btn-large {
+    margin: 10px;
 }
 
 /* -- Footer styling -- */
@@ -131,6 +131,8 @@ main {
 /* -- Media Queries -- */
 
 @media screen and (max-width: 992px) {
+
+    /* -- Hides 'Sign Up' section in Footer -- */
     .hidden {
         display: none;
     }
@@ -139,10 +141,18 @@ main {
         margin-left: 0;
         left: 30%;
     }
+
+    .landing-page {
+        padding-top: 30vh;
+    }
 }
 
-@media screen and (max-width: 382px) {
-    .brand-logo {
-        font-size: 2rem;
+@media screen and (max-width: 402px) {
+    #my-cookbook {
+        font-size: 20px;
+    }
+
+    .heading1 {
+        font-size: 35px;
     }
 }
