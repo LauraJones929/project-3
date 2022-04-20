@@ -377,6 +377,7 @@ Much of the structure of this site follows what was taught during the Backend De
 | Buttons | Buttons used throughout the site | [Materliazecss.com](https://materializecss.com/buttons.html) |
 | Python functions | The backend functionality structure was taught via the Code Institute Task Manager Project | [CI Task Manager Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/054c3813e82e4195b5a4d8cd8a99ebaa/) |
 | Form Validation for Dropdown Input Box | Ensures form validation on the dropdown input field when using Materliaze | [CI Task Manager Walkthrough Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/9e2f12f5584e48acb3c29e9b0d7cc4fe/6449dcd23ca14016aa83dc7313d91a02/?child=first) |
+| 404 Page | Renders 404 Page through Python & Flask | [GeeksForGeeks.org](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/) |
 
 | Imagery | Description | Source |
 | ------------- | ----------- | ------ |
