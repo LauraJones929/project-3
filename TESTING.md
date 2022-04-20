@@ -288,5 +288,6 @@ I used the a11y Contrast Checker to test all colours throughout the project. As 
 | Issue # | Bug | Description | Solution |
 | ------- | --- | ----------- | -------- |
 | 1 | White-space in text areas | When clicking on the text area for the *Ingredients* and *Method* I noticed there was some white space, which affected the validation feedback when filling in the form. | I remembered seeing this on the Code Institute tutorials as this was an issue that came up during a walkthrough project. I was able to follow this advice and get rid of the whitespace by using the closing tag `</textarea>` on the same line of the last line of text.
+| 2 | White-space on either side of Landing Page image | You can see there is a fair amount of white-space on either side of the image, as opposed to stretching across the entire screen. | No solution yet - I have researched on various forums and websites how to get rid of the unwanted white-space but have not yet found a solution that works as desired. I could inject the background image into the `<body>` element of the page,which will allow the image to fill the entire screen, however I don't want to use the background image across the entire site, only the landing page. |
 
 [Back to README.md file](README.md)
