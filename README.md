@@ -171,7 +171,7 @@ I used Mongo DB Atlas, a non-relational database to store and retrieve all of th
 ### Existing Features
 | Feature | Description | Image URL |
 | ------- | ----------- | --------- |
-| Landing | Landing page to convey the purpose of the website to new and returning users. | |
+| Landing | Landing page to convey the purpose of the website to new and returning users. | [Landing Page](/static/images/newlanding.jpg) |
 | Header | Logo and nav bar allow user to navigate through the site with ease. Burger icon displays on smaller devices. | [Header](/documentation/images/features/header.jpg) |
 | Footer | Sign up option and social media icons direct the user to the company's social media platforms. | [Footer](/documentation/images/features/footer.jpg) |
 | Register | Provides the opportunity for new users to sign-up quickly and efficiently. | [Registration Page](/documentation/images/features/register.jpg) |

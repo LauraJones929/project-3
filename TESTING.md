@@ -213,7 +213,7 @@ Online tools have been used to validate the HTML, CSS, Python and JavaScript fil
 | ---- | ------- | ------ | --------- | ------- |
 | HTML Validation | Copy page URI into W3C validator | 1 Warning - Section lacks headers | [HTML W3C Validator Results](/documentation/images/testing/htmlvalid.jpg) | The page has a heading. This is not a conventional website page layout of multiple headed sections |
 | CSS Validation | Copy page URI into W3C validator | 7 Warnings - Related to Materialize CSS | [CSS W3C Validator Results](/documentation/images/testing/cssvalid.jpg) | The errors that have shown are related to the Materialize CSS that I have used. Layout or functionality of the app is not affected |
-| Python Validation | Copy Python code into PEP8 validator |  | [Pep8 Validator Results](/documentation/images/testing/pep8.jpg)
+| Python Validation | Copy Python code into PEP8 validator | No issues | [Pep8 Validator Results](/documentation/images/testing/pep8.jpg)
 | JavaScript Validation | Copy JavaScript code into JShint | Warnings | [JShint Validator Results](/documentation/images/testing/jshint.jpg) | Warning related to Materialize CSS code and ES6 versions. Web app not affected |
 
 ## Responsivity Testing
